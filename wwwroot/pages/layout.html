@@ -1,0 +1,588 @@
+﻿
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Job Board">
+    <meta name="keywords" content="">
+    <title>Job Search | JobBoard</title>
+    <!-- Favicon -->
+    <link href="../favicon.ico" rel="shortcut icon">
+
+    <!-- CSS -->
+
+    <link href="../assets4/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets4/css/app.css" rel="stylesheet">
+
+    <!-- Fonts/Icons -->
+    <link href="../assets4/plugins/font-awesome/css/all.css" rel="stylesheet">
+    <link href="../assets4/plugins/themify/themify-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="../css/pagedlist.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+
+    <style>
+    </style>
+
+
+
+
+
+
+
+</head>
+<body class="bg-grey-lightest ">
+
+
+    <meta charset="utf-8">
+
+
+    <header>
+
+        <div class="header-top bg-primary-light ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h6 class="text-white font-weight-light"><strong class="mr-3 font-weight-semi-bold">Limited Time Offer!</strong> Sign Up for a Yearly Membership for 75% off normal price!</h6>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end header-top -->
+
+
+        <nav class="navbar navbar-dark">
+            <div class="container">
+                <div class="navbar-brand" href="../">
+                    <img src="../assets4/images/shutterlogo3-sm-white.png" />
+                    <h5>showbizjobs</h5>
+
+
+                </div>
+                <ul class="nav m-auto text-white-01 dropdown-icon-arrow">
+
+                    <!-- add 'dropdown-dark/dropdown-grey/dropdown-transparent/dropdown-transparent-dark' -->
+                    <!-- Basic link -->
+                    <!-- Dropdown -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Login?returnurl=%2FHome%2FLayout"><i class="fa fa-unlock mr-2"></i> Login</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Register"><i class="fa fa-user-plus mr-2"></i> Sign Up</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Jobs/Explore">Explore Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Internships/Explore">Explore Internships</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link" href="../Resources/">Advice</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">How To Use The Site</a></li>
+                            <li><a href="#">Membership Features</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Application Help</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/ResumeTips">Resume Tips</a>
+                                    <a href="../Resources/CoverLetterTips">Cover Letter Tips</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Step by Step Guides</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Job Alerts</a>
+                                    <a href="../Resources/">Changing ID / Password</a>
+                                    <a href="../Resources/">Canceling Membership</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Avoiding Scams</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Talent Agency / Acting Scams</a>
+                                    <a href="../Resources/">Production Assistant Scams</a>
+                                    <a href="../Resources/">Overseas Work Scams</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Industry Articles</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Breaking into Entertainment</a>
+                                    <a href="../Resources/">Changing Careers</a>
+                                    <a href="../Resources/">More Articles...</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+
+                </ul><!-- end nav -->
+                <!-- Icons -->
+                <ul class="list-horizontal-unstyled">
+                    <li class="ml-2 d-none d-lg-inline">
+
+                        <a href="#" class="button button-xs button-grey text-dark button-radius button-hover-float mt-0" data-toggle="modal" data-target="#register-modal"><i class="fa fa-user-plus"></i> Sign Up</a>
+
+                    </li>
+                    <li class="ml-2 d-none d-lg-inline">
+                        <a class="button button-xs button-white text-dark button-radius button-hover-float" href="../Identity/Account/Login?returnurl=%2FHome%2FLayout"><i class="fa fa-unlock"></i> Login</a>
+                    </li>
+
+                </ul>
+
+                <!-- Nav Toggle button -->
+                <button class="nav-toggle-btn position-right">
+                    <span class="lines"></span>
+                </button>
+            </div><!-- end container -->
+        </nav>
+
+    </header>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="font-14 fa fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="text-center mb-4">
+                        <h4>Choose Your Account Type</h4>
+                        <a class="button btn button-xl button-dark mr-3" href="../Identity/Account/Register">Job Seeker</a><a class="button button-xl btn btn-info" href="../Identity/Account/Register?UserType=Employer">Employer</a>
+                    </div>
+
+                </div>
+
+
+
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!-- end modal -->
+    <!-- Breadcrumb -->
+
+    <div class='bg-secondary pt-3 pb-3'> <div class='container'> <div class='row'> <div class='col-12 col-md-9'> <nav class='text-left pl-2'> <ul class='breadcrumb'><li class='breadcrumb-item text-white'><a href='/'>Home</a></li><li class='breadcrumb-item'><a href='/Home'>Home</a></li></ul> </nav> </div> <div class='col-md-3 text-right d-none d-lg-block'><a href='/Employer' class='heading-uppercase'>Employer? Click Here</a> </div> </div> </div> </div>
+
+
+
+    <!-- Body section -->
+
+    <main id="content" role="main">
+
+
+        <!-- Main Section -->
+
+        <div class="col-12 col-lg-8 offset-lg-2 p-5 bg-white">
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+
+                    <h4>Colors</h4>
+
+                    <p class="text-primary">.text-primary</p>
+                    <p class="text-secondary">.text-secondary</p>
+                    <p class="text-success">.text-success</p>
+                    <p class="text-danger">.text-danger</p>
+                    <p class="text-warning">.text-warning</p>
+                    <p class="text-info">.text-info</p>
+                    <p class="text-light bg-dark">.text-light</p>
+                    <p class="text-dark">.text-dark</p>
+                    <p class="text-body">.text-body</p>
+                    <p class="text-muted">.text-muted</p>
+                    <p class="text-white bg-dark">.text-white</p>
+                    <p class="text-black-50">.text-black-50</p>
+                    <p class="text-white-50 bg-dark">.text-white-50</p>
+
+
+                    <p><a href="#" class="text-primary">Primary link</a></p>
+                    <p><a href="#" class="text-secondary">Secondary link</a></p>
+                    <p><a href="#" class="text-success">Success link</a></p>
+                    <p><a href="#" class="text-danger">Danger link</a></p>
+                    <p><a href="#" class="text-warning">Warning link</a></p>
+                    <p><a href="#" class="text-info">Info link</a></p>
+                    <p><a href="#" class="text-light bg-dark">Light link</a></p>
+                    <p><a href="#" class="text-dark">Dark link</a></p>
+                    <p><a href="#" class="text-muted">Muted link</a></p>
+                    <p><a href="#" class="text-white bg-dark">White link</a></p>
+
+
+                </div>
+
+            </div>
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+                    <h4 class="header-title">Default Buttons</h4>
+
+                    <div class="button-list">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+
+                        <button type="button" class="btn btn-link">Link</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+
+                    <h4>Background</h4>
+
+                    <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+                    <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+                    <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+                    <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+                    <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+                    <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+                    <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+                    <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+                    <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+                    <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+
+                </div>
+
+
+            </div>
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+
+                    <div class="button-list">
+                        <h4 class="header-title">Alerts</h4>
+
+                        <div class="alert alert-primary" role="alert">
+                            This is a primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            This is a secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            This is a success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            This is a danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            This is a warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            This is a info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            This is a light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            This is a dark alert—check it out!
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+                    <h4 class="header-title">Headings</h4>
+                    <p class="sub-header">
+                        All HTML headings, <code class="highlighter-rouge">&lt;h1&gt;</code> through
+                        <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code>
+                        classes are also available, for when you want to match the font styling of a heading
+                        but still want your text to be displayed inline.
+                    </p>
+
+                    <h1>This is a Heading 1</h1>
+                    <p class="text-muted">
+                        Suspendisse vel quam malesuada, aliquet sem sit
+                        amet, fringilla elit. Morbi
+                        tempor tincidunt tempor. Etiam id turpis viverra, vulputate sapien
+                        nec,
+                        varius sem. Curabitur ullamcorper fringilla eleifend. In ut eros
+                        hendrerit
+                        est consequat posuere et at velit.
+                    </p>
+
+                    <div class="clearfix"></div>
+
+                    <h2>This is a Heading 2</h2>
+                    <p class="text-muted">
+                        In nec rhoncus eros. Vestibulum eu mattis nisl.
+                        Quisque viverra viverra magna
+                        nec pulvinar. Maecenas pellentesque porta augue, consectetur
+                        facilisis diam
+                        porttitor sed. Suspendisse tempor est sodales augue rutrum
+                        tincidunt.
+                        Quisque a malesuada purus.
+                    </p>
+
+                    <div class="clearfix"></div>
+
+                    <h3>This is a Heading 3</h3>
+                    <p class="text-muted">
+                        Vestibulum auctor tincidunt semper. Phasellus ut
+                        vulputate lacus. Suspendisse
+                        ultricies mi eros, sit amet tempor nulla varius sed. Proin nisl
+                        nisi,
+                        feugiat quis bibendum vitae, dapibus in tellus.
+                    </p>
+
+                    <div class="clearfix"></div>
+
+                    <h4>This is a Heading 4</h4>
+                    <p class="text-muted">
+                        Nulla et mattis nunc. Curabitur scelerisque
+                        commodo condimentum. Mauris
+                        blandit, velit a consectetur egestas, diam arcu fermentum justo,
+                        eget
+                        ultrices arcu eros vel erat.
+                    </p>
+
+                    <div class="clearfix"></div>
+
+                    <h5>This is a Heading 5</h5>
+                    <p class="text-muted">
+                        Quisque nec turpis at urna dictum luctus.
+                        Suspendisse convallis dignissim
+                        eros at volutpat. In egestas mattis dui. Aliquam mattis dictum
+                        aliquet.
+                        Nulla sapien mauris, eleifend et sem ac, commodo dapibus odio.
+                        Vivamus
+                        pretium nec odio cursus elementum. Suspendisse molestie ullamcorper
+                        ornare.
+                    </p>
+
+                    <div class="clearfix"></div>
+
+                    <h6>This is a Heading 6</h6>
+                    <p class="text-muted">
+                        Donec ultricies, lacus id tempor condimentum, orci
+                        leo faucibus sem, a
+                        molestie libero lectus ac justo. ultricies mi eros, sit amet tempor
+                        nulla
+                        varius sed. Proin nisl nisi, feugiat quis bibendum vitae, dapibus in
+                        tellus.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row mt-3">
+
+                <h4 class="header-title">Text Colors</h4>
+
+                <div class="col-12">
+                    <h4 class="header-title">Contextual Text Colors</h4>
+                    <p class="sub-header">
+                        Your awesome text goes here.
+                    </p>
+
+                    <p class="text-custom">
+                        Etiam porta sem malesuada magna mollis euismod.
+                    </p>
+                    <p class="text-pink">
+                        Donec ullamcorper nulla non metus auctor fringilla.
+                    </p>
+                    <p class="text-muted">
+                        Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                    </p>
+                    <p class="text-primary">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                    <p class="text-success">
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    </p>
+                    <p class="text-info">
+                        Maecenas sed diam eget risus varius blandit sit amet non magna.
+                    </p>
+                    <p class="text-warning">
+                        Etiam porta sem malesuada magna mollis euismod.
+                    </p>
+                    <p class="text-danger">
+                        Donec ullamcorper nulla non metus auctor fringilla.
+                    </p>
+                    <p class="text-dark">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                    <p class="text-purple m-b-0">
+                        Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+                    </p>
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+                    <h4 class="header-title">Badges</h4>
+
+                </div>
+                <div class="col-6">
+
+
+
+                    <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+                    <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+                    <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+                    <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+                    <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+                    <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+
+
+                </div>
+                <div class="col-6">
+
+                    <span class="badge badge-primary">Primary</span>
+                    <span class="badge badge-secondary">Secondary</span>
+                    <span class="badge badge-success">Success</span>
+                    <span class="badge badge-danger">Danger</span>
+                    <span class="badge badge-warning">Warning</span>
+                    <span class="badge badge-info">Info</span>
+                    <span class="badge badge-light">Light</span>
+                    <span class="badge badge-dark">Dark</span>
+
+                </div>
+
+            </div>
+
+            <div class="row mt-3">
+
+                <div class="col-12">
+
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cras justo odio</li>
+                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                            <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+    <!-- end Body section -->
+    <footer>
+        <div class="section-sm bg-dark-lighter">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-left order-md-1">
+                        <h3 class="margin-0">showbizjobs</h3>
+                    </div>
+                    <div class="col-12 col-md-3 text-center text-md-right order-md-3">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 text-center order-md-2">
+                        <ul class="list-inline font-small uppercase font-weight-normal">
+                            <li><a class="text-link-7" href="../">Home</a></li>
+                            <li><a class="text-link-7" href="../Employer/">Employers</a></li>
+                            <li><a class="text-link-7" href="../Resources/">Support</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div>
+        <div class="section-xs bg-dark p-2">
+            <div class="container text-center">
+                <p>&copy; 2020 showbizjobs All Rights Reserved.</p>
+            </div><!-- end container -->
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- ***** JAVASCRIPT ***** -->
+    <!-- Plugins -->
+    <script src="../assets4/plugins/bootstrap/popper.min.js"></script>
+    <script src="../assets4/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script src="../lib/jquery.imagesloaded/imagesloaded-old.min.js"></script>
+    <script src="../assets4/js/functions2.js"></script>
+
+    <!-- Place your API Key in 'YOUR_API_KEY'
+    <!-- Scripts -->
+
+
+    <script>
+        window.fwSettings = {
+            'widget_id': 61000000445
+        };
+        !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
+    </script>
+    <script type='text/javascript' src='https://widget.freshworks.com/widgets/61000000445.js' async defer></script>
+
+    <script>
+
+        if ($("#greybox").length) {
+
+            $("#greybox").html("<h1>" + $("#greybox").width().toFixed(0) + " x " + $("#greybox").height().toFixed(0) + "");
+        }
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
+

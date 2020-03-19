@@ -1,0 +1,1705 @@
+﻿
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Job Board">
+    <meta name="keywords" content="">
+    <title>Create Posting | JobBoard</title>
+    <!-- Favicon -->
+    <link href="../favicon.ico" rel="shortcut icon">
+
+    <!-- CSS -->
+
+    <link href="../assets4/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets4/css/app.css" rel="stylesheet">
+
+    <!-- Fonts/Icons -->
+    <link href="../assets4/plugins/font-awesome/css/all.css" rel="stylesheet">
+    <link href="../assets4/plugins/themify/themify-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="../css/pagedlist.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+
+    <style>
+    </style>
+
+
+    <link href="../lib/Trumbowyg/ui/trumbowyg.min.css" rel="stylesheet" />
+
+    <link href="../assets4/plugins/bootstrap4-toggle/bootstrap4-toggle.css" rel="stylesheet" />
+
+    <link href="../lib/croppie/croppie.css" rel="stylesheet" />
+
+    <style>
+        #maindescription .trumbowyg {
+            min-height: 250px !important;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+<body class="bg-grey-lightest ">
+
+
+    <meta charset="utf-8">
+
+
+    <header>
+
+
+        <nav class="navbar navbar-dark">
+            <div class="container">
+                <div class="navbar-brand" href="../">
+                    <img src="../assets4/images/shutterlogo3-sm-white.png" />
+                    <h5>showbizjobs</h5>
+
+
+                </div>
+                <ul class="nav m-auto text-white-01 dropdown-icon-arrow">
+
+                    <!-- add 'dropdown-dark/dropdown-grey/dropdown-transparent/dropdown-transparent-dark' -->
+                    <!-- Basic link -->
+                    <!-- Dropdown -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Login?returnurl=%2FEmployer%2FPosting%2FCreate"><i class="fa fa-unlock mr-2"></i> Login</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Register"><i class="fa fa-user-plus mr-2"></i> Sign Up</a>
+                    </li>
+
+
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link" href="#">Postings</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Employer/Posting/Manage">Manage My Postings</a></li>
+                            <li><a href="../Employer/Posting/Create">Create New Posting</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link" href="#">How It Works</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../Internships/New">New Internships</a></li>
+                            <li style="height: 0px;margin: .5rem 1rem;overflow: hidden;border-top: 1px solid #e9ecef; padding: 0px"></li>
+                            <li><a href="../Internships/Explore">By Category/Location</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link" href="#">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Employer FAQ</a></li>
+                            <li><a href="#">Internship Guidelines</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Step by Step Guides</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Posting New Listing</a>
+                                    <a href="../Resources/">Managing Your Listings</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+
+
+
+                </ul><!-- end nav -->
+                <!-- Icons -->
+                <ul class="list-horizontal-unstyled">
+                    <li class="ml-2 d-none d-lg-inline">
+
+                        <a href="#" class="button button-xs button-grey text-dark button-radius button-hover-float mt-0" data-toggle="modal" data-target="#register-modal"><i class="fa fa-user-plus"></i> Sign Up</a>
+
+                    </li>
+                    <li class="ml-2 d-none d-lg-inline">
+                        <a class="button button-xs button-white text-dark button-radius button-hover-float" href="../Identity/Account/Login?returnurl=%2FEmployer%2FPosting%2FCreate"><i class="fa fa-unlock"></i> Login</a>
+                    </li>
+
+                </ul>
+
+                <!-- Nav Toggle button -->
+                <button class="nav-toggle-btn position-right">
+                    <span class="lines"></span>
+                </button>
+            </div><!-- end container -->
+        </nav>
+
+    </header>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="font-14 fa fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="text-center mb-4">
+                        <h4>Choose Your Account Type</h4>
+                        <a class="button btn button-xl button-dark mr-3" href="../Identity/Account/Register">Job Seeker</a><a class="button button-xl btn btn-info" href="../Identity/Account/Register?UserType=Employer">Employer</a>
+                    </div>
+
+                </div>
+
+
+
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!-- end modal -->
+    <!-- Breadcrumb -->
+
+    <div class='bg-secondary pt-3 pb-3'> <div class='container'> <div class='row'> <div class='col-12 col-md-9'> <nav class='text-left pl-2'> <ul class='breadcrumb'><li class='breadcrumb-item text-white'><a href='/'>Home</a></li><li class='breadcrumb-item'><a href='/Employer'>Employer</a></li><li class='breadcrumb-item'><a href='/Employer/Posting/Manage'>Manage Postings</a></li></ul> </nav> </div> <div class='col-md-3 text-right d-none d-lg-block'><a href='/' class='heading-uppercase'>Job Seeker? Click Here</a> </div> </div> </div> </div>
+
+
+
+    <!-- Body section -->
+
+    <main id="content" role="main">
+
+
+
+
+
+
+
+        <div id="postlisting" class="bg-white">
+
+            <div class="container">
+
+                <div class="row pt-5 pb-5">
+                    <!-- Main Section -->
+
+                    <div class="col-12 col-lg-9">
+
+                        <h1 class="font-weight-bold">Post a Job</h1>
+
+                        <ul class="nav nav-pills margin-bottom-20">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="standardtab" data-toggle="tab" href="#" onclick="standardForm()">Standard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="advancedtab" data-toggle="tab" href="#" onclick="advancedForm()">Advanced</a>
+                            </li>
+                        </ul>
+
+
+                        <form autocomplete="off" class="form-style-2" action="/Employer/Posting/Preview" method="post">
+
+
+
+
+
+
+
+
+                            <div class="form-row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="form-group">
+
+
+                                        <label class="control-label">Company Email</label> <small class="text-nowrap">Private email used to edit/delete the posting.</small>
+                                        <div id="company_email_help" class="sidehelp">
+                                            <strong>Company Email</strong> is required to manage/edit/delete the posting.
+                                            <br /><br />This email will <strong>never</strong> be shown to applicants even if you choose to have job seekers to send applications here.
+                                            (They will see an 'alias' like <i>apply-a1b2c3@...</i>)
+                                        </div>
+
+                                        <input class="form-control" type="text" data-val="true" data-val-maxlength="The field Company Email must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" data-val-required="The Company Email field is required." id="posting_email_private" maxlength="256" name="posting_email_private" value="" />
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="posting_email_private" data-valmsg-replace="true"></span>
+
+
+                                    </div>
+                                </div><!-- end row -->
+
+                            </div>
+
+                            <div class="margin-bottom-10">
+                                <div class="form-row ">
+                                    <div class="col-12 col-lg-8 ">
+                                        <label class="control-label" for="company_name">Company Name</label> <small class="text-nowrap">Your legal company name is required.</small>
+                                        <div id="company_name_help" class="sidehelp">
+                                            <strong>Company Name</strong> is required so we know who is posting.
+                                            <br /><br />If you don't want to show the company name on the posting, just change the <em>Keep Confidential</em> switch to "Yes".
+                                        </div>
+                                        <input class="form-control" type="text" data-val="true" data-val-maxlength="The field Company Name must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" data-val-required="The Company Name field is required." id="company_name" maxlength="256" name="company_name" value="" />
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="company_name" data-valmsg-replace="true"></span>
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-4">
+
+                                        <div class="form-check padding-0">
+                                            <label class="control-label d-block" for="defaultCheck1">
+                                                Keep Confidential?
+                                            </label>
+
+                                            <input class="form-check-input" type="checkbox" data-on="Yes" data-off="No" data-toggle="toggle" data-height="44" data-width="80" data-val="true" data-val-required="The confidential field is required." id="confidential" name="confidential" value="true" />
+
+                                        </div>
+
+
+
+
+                                    </div>
+
+
+
+                                </div><!-- end row -->
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <ul class="accordion style-3 border-radius">
+                                        <li class="bg-grey-lightest">
+                                            <div id="companyinfo" class="accordion-title">
+                                                <h6 class="heading-uppercase">Additional Company Details</h6>
+                                            </div>
+                                            <div class="accordion-content ">
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-8">
+                                                        <div class="form-row">
+
+                                                            <div class="col-12">
+                                                                <label class="control-label">Company Description</label>
+                                                                <div id="company_background_help" class="sidehelp">
+                                                                    <strong>Company Background</strong> is required so we know who is posting.
+                                                                    <br /><br />If you don't want to show the company name on the posting, just change the <i>Keep Confidential</i> switch to "Yes".
+                                                                </div>
+                                                                <textarea class="form-control" rows="1" id="company_background" name="company_background">
+</textarea>
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="company_background" data-valmsg-replace="true"></span>
+                                                            </div>
+
+
+                                                        </div><!-- end row -->
+
+                                                        <div class="form-row">
+                                                            <div class="col-12">
+
+                                                                <label class="control-label">Company Careers Page</label>
+                                                                <div id="company_url1_help" class="sidehelp">
+                                                                    <strong>Company Careers page</strong> will link to your main careers page (not an individual listing).  It should look
+                                                                    something like <i>https://www.company.com/careers/</i>
+                                                                </div>
+                                                                <input class="form-control" placeholder="http://" type="text" id="company_careerspage_url" name="company_careerspage_url" value="" />
+                                                                <span class="text-danger field-validation-valid" data-valmsg-for="company_careerspage_url" data-valmsg-replace="true"></span>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-lg-4 ">
+                                                        <div class="row">
+
+                                                            <div class="col-12">
+                                                                <label class="control-label">Company Logo</label>
+                                                                <div class="mt-3">
+                                                                    <a class="btn file-btn button-radius button-md">
+                                                                        <span>Upload</span>
+                                                                        <input type="file" id="upload" value="Choose a file" accept="image/*" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mt-3">
+                                                            <div class="col-12">
+                                                                <div id="imageresult">
+
+                                                                    <img style="" />
+
+
+
+                                                                </div>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                <div class="form-row">
+
+
+                                                    <div class="col-12 col-md-6">
+
+
+                                                        <!-- Button -->
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="uploadLogo" tabindex="-1" role="dialog" aria-labelledby="uploadLogoLabel" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h6 class="modal-title" id="uploadLogoLabel">Upload Logo</h6>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+
+                                                                        <div class="row mb-5">
+
+                                                                            <div class="col-6">
+                                                                                <div class="demo-wrap upload-demo">
+
+                                                                                    <div class="upload-msg">
+                                                                                        Upload a file to start cropping
+                                                                                    </div>
+
+                                                                                    <div id='default-foto' class='hidden'></div>
+
+                                                                                    <div class="upload-demo-wrap">
+                                                                                        <div id="upload-demo"></div>
+                                                                                    </div>
+
+
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <h5 class="font-weight-bold">Instructions</h5>
+                                                                                <ul class="font-14">
+                                                                                    <li>
+                                                                                        First, choose your basic logo shape:
+                                                                                        <div class="clearfix"></div>
+                                                                                        <a id="squareshape" href="#" class="logoshape selectedshape" style="height: 75px; width: 75px;"><small>square</small></a>
+                                                                                        <a id="hrectangleshape" class="logoshape" href="#" style="height: 50px; width: 100px;"><small>h-rectangle</small></a>
+                                                                                        <a id="vrectangleshape" class="logoshape" href="#" style="height: 100px; width: 50px;"><small style="transform: rotate(-90deg);">v-rectangle</small></a>
+                                                                                        <div class="clearfix"></div>
+                                                                                    </li>
+                                                                                    <li>Then, use the zoom bar to get the correct size in the shape.  You want the logo as close to the edges as possible.  You can also move the image by clicking and dragging it.</li>
+                                                                                    <li>Finally, click Save Changes to save your logo</li>
+
+                                                                                </ul>
+
+                                                                            </div>
+
+
+                                                                        </div>
+
+
+
+
+
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="button button-xs button-grey" data-dismiss="modal">Cancel</button>
+                                                                        <button id="saveresult" type="button" class="button button-xs button-dark">Save changes</button>
+                                                                    </div>
+                                                                </div><!-- end modal-content -->
+                                                            </div><!-- end modal-dialog -->
+                                                        </div><!-- end modal -->
+
+
+
+                                                    </div>
+                                                </div><!-- end row -->
+
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <hr />
+
+                            <div class="form-row">
+                                <div class="col-md-12 col-sm-12">
+
+                                    <label class="control-label" for="title">Position Title</label>
+                                    <div id="title_help" class="sidehelp">
+                                        <strong>Position Title</strong> is required.  It should be as specific as possible, ideally what would be seen on the person's business card.
+                                        (Ex: Assistant to HR Director).
+                                        <br />
+                                        <ul>
+                                            <li>Do not use ALL CAPS or your posting will be rejected.</li>
+                                            <li>Do not put extraneous info like ** IMMEDIATE HIRE ** or ASAP!!!</li>
+                                            <li>Internships should all be prefaced with "Intern - "</li>
+                                            <li>Avoid using lingo terms that don't convey meaning to everyone (ex. terms like 'Guru' or 'Analyst II')</li>
+                                            <li>Only sales positions can be classified as Commission</li>
+                                            <li>We do not accept postings for unpaid modeling, unpaid writing, talent scouts, unlicensed talent agents, personal representation</li>
+
+
+                                        </ul>
+
+                                    </div>
+                                    <input class="form-control" type="text" data-val="true" data-val-maxlength="The field Position Title must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" data-val-required="The Position Title field is required." id="title" maxlength="256" name="title" value="" />
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="title" data-valmsg-replace="true"></span>
+
+                                </div>
+
+
+                            </div><!-- end row -->
+
+
+                            <div class="form-row">
+
+                                <div class="col-12 col-md-4">
+
+                                    <label class="control-label" for="employmentType">Employment Type</label>
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The Employment Type field is required." id="employmentType" name="employmentType">
+                                        <option value="">Select Type</option>
+                                        <option value="1">Full Time</option>
+                                        <option value="2">Part Time</option>
+                                        <option value="3">Contract</option>
+                                        <option value="4">Commission</option>
+                                        <option value="5">Temporary</option>
+                                        <option value="10">Internship</option>
+                                    </select>
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="employmentType" data-valmsg-replace="true"></span>
+
+                                </div>
+
+
+                                <div class="col-12 col-md-5">
+                                    <label class="control-label" for="experienceLevel">Experience Level</label>
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The Experience Level field is required." id="experienceLevel" name="experienceLevel">
+                                        <option value="">Select Level</option>
+                                        <option value="1">Entry (0-2 years)</option>
+                                        <option value="4">Mid (2-5 years)</option>
+                                        <option value="9">Senior (5-10 years)</option>
+                                        <option value="11">Executive (10&#x2B; years)</option>
+                                        <option value="99">Not Specified</option>
+                                    </select>
+
+                                </div>
+
+
+                                <div class="col-12 col-md-3 ">
+                                    <label class="control-label" for="compensation">Compensation</label>
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The Compensation field is required." id="compensation" name="compensation">
+                                        <option value="1">Paid</option>
+                                        <option value="8">Low Budget</option>
+                                        <option value="9">Low / Deferred Rate</option>
+                                        <option value="10">Unpaid</option>
+                                    </select>
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row col-spacing-10">
+
+                                <div class="ns">
+
+                                    <input type="text" class="form-control" id="streetaddress" name="streetaddress" autocomplete="false">
+                                </div>
+
+                                <div class="col-12 col-lg-8">
+                                    <label class="control-label">Location *</label>
+                                    <div id="location_help" class="sidehelp">
+                                        A <strong>location</strong> is required to match your listing with candidates near your area.  Postal/Zip code is especially
+                                        important as cities like Los Angeles can be large enough to make travel an issue depending on where the candidate lives.
+                                        <br /><br />If this is a remote work opportunity, just use the location of your company's offices.
+                                    </div>
+                                    <input type="text" id="locationsearch" name="locationsearch" class="form-control" placeholder="Search by Address, City or Postal Code/Zip" autocomplete="off" onFocus="this.setAttribute('autocomplete','nope'); " />
+
+                                </div>
+                                <div class="col-12 offset-lg-1 col-lg-3">
+                                    <label class="control-label" for="jobLocationType">Remote Work</label>
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The Remote Work field is required." id="jobLocationType" name="jobLocationType">
+                                        <option selected="selected" value="0">No</option>
+                                        <option value="1">Telecommute</option>
+                                        <option value="2">Remote</option>
+                                    </select>
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="jobLocationType" data-valmsg-replace="true"></span>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="row col-spacing-10">
+
+                                <div class="col-12 col-lg-8">
+                                    <input type="text" class="form-control" placeholder="Street Address (optional)" autocomplete="no" data-val="true" data-val-maxlength="The field Street Address must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" id="address1" maxlength="256" name="address1" value="">
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="address1" data-valmsg-replace="true"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="row col-spacing-10">
+
+                                <div class="col-12 col-lg-4">
+                                    <input type="text" class="form-control" placeholder="City" autocomplete="no" data-val="true" data-val-maxlength="The field City must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" data-val-required="The City field is required." id="city" maxlength="256" name="city" value="">
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="city" data-valmsg-replace="true"></span>
+                                </div>
+
+                                <div class="col-12 col-lg-4">
+                                    <input type="text" class="form-control" placeholder="Neighborhood (optional)" autocomplete="no" data-val="true" data-val-maxlength="The field Neighborhood must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" id="neighborhood" maxlength="256" name="neighborhood" value="">
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="neighborhood" data-valmsg-replace="true"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="row col-spacing-10">
+
+
+                                <div class="col-4 col-lg-4">
+                                    <input type="text" class="form-control" placeholder="State/Prov" autocomplete="no" data-val="true" data-val-maxlength="The field State/Prov must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" data-val-required="The State/Prov field is required." id="state" maxlength="256" name="state" value="">
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="state" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="col-4 col-lg-2">
+                                    <select class="custom-select w-100" data-val="true" data-val-maxlength="The field Country must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" data-val-required="The Country field is required." id="country" name="country">
+                                        <option value="US">US</option>
+                                        <option value="AG">AG</option>
+                                        <option value="AR">AR</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AW">AW</option>
+                                        <option value="AU">AU</option>
+                                        <option value="AT">AT</option>
+                                        <option value="AZ">AZ</option>
+                                        <option value="BS">BS</option>
+                                        <option value="BH">BH</option>
+                                        <option value="BD">BD</option>
+                                        <option value="BB">BB</option>
+                                        <option value="BY">BY</option>
+                                        <option value="BE">BE</option>
+                                        <option value="BZ">BZ</option>
+                                        <option value="BJ">BJ</option>
+                                        <option value="BM">BM</option>
+                                        <option value="BT">BT</option>
+                                        <option value="BO">BO</option>
+                                        <option value="BA">BA</option>
+                                        <option value="BW">BW</option>
+                                        <option value="BR">BR</option>
+                                        <option value="BN">BN</option>
+                                        <option value="BG">BG</option>
+                                        <option value="KH">KH</option>
+                                        <option value="CM">CM</option>
+                                        <option value="CA">CA</option>
+                                        <option value="KY">KY</option>
+                                        <option value="CF">CF</option>
+                                        <option value="TD">TD</option>
+                                        <option value="CL">CL</option>
+                                        <option value="CN">CN</option>
+                                        <option value="CO">CO</option>
+                                        <option value="KM">KM</option>
+                                        <option value="CG">CG</option>
+                                        <option value="CR">CR</option>
+                                        <option value="HR">HR</option>
+                                        <option value="CU">CU</option>
+                                        <option value="CY">CY</option>
+                                        <option value="CZ">CZ</option>
+                                        <option value="CI">CI</option>
+                                        <option value="KP">KP</option>
+                                        <option value="DM">DM</option>
+                                        <option value="DO">DO</option>
+                                        <option value="EC">EC</option>
+                                        <option value="EG">EG</option>
+                                        <option value="SV">SV</option>
+                                        <option value="EE">EE</option>
+                                        <option value="ET">ET</option>
+                                        <option value="FO">FO</option>
+                                        <option value="FJ">FJ</option>
+                                        <option value="FI">FI</option>
+                                        <option value="FR">FR</option>
+                                        <option value="GA">GA</option>
+                                        <option value="GM">GM</option>
+                                        <option value="GE">GE</option>
+                                        <option value="DE">DE</option>
+                                        <option value="GH">GH</option>
+                                        <option value="GI">GI</option>
+                                        <option value="GR">GR</option>
+                                        <option value="GL">GL</option>
+                                        <option value="GD">GD</option>
+                                        <option value="GP">GP</option>
+                                        <option value="GU">GU</option>
+                                        <option value="GT">GT</option>
+                                        <option value="GY">GY</option>
+                                        <option value="HT">HT</option>
+                                        <option value="HN">HN</option>
+                                        <option value="HK">HK</option>
+                                        <option value="HU">HU</option>
+                                        <option value="IS">IS</option>
+                                        <option value="IN">IN</option>
+                                        <option value="ID">ID</option>
+                                        <option value="IQ">IQ</option>
+                                        <option value="IE">IE</option>
+                                        <option value="IR">IR</option>
+                                        <option value="IL">IL</option>
+                                        <option value="IT">IT</option>
+                                        <option value="JM">JM</option>
+                                        <option value="JP">JP</option>
+                                        <option value="JO">JO</option>
+                                        <option value="KZ">KZ</option>
+                                        <option value="KE">KE</option>
+                                        <option value="XK">XK</option>
+                                        <option value="KW">KW</option>
+                                        <option value="KG">KG</option>
+                                        <option value="LV">LV</option>
+                                        <option value="LB">LB</option>
+                                        <option value="LS">LS</option>
+                                        <option value="LR">LR</option>
+                                        <option value="LY">LY</option>
+                                        <option value="LI">LI</option>
+                                        <option value="LT">LT</option>
+                                        <option value="LU">LU</option>
+                                        <option value="MO">MO</option>
+                                        <option value="MG">MG</option>
+                                        <option value="MY">MY</option>
+                                        <option value="MV">MV</option>
+                                        <option value="ML">ML</option>
+                                        <option value="MX">MX</option>
+                                        <option value="MC">MC</option>
+                                        <option value="MN">MN</option>
+                                        <option value="ME">ME</option>
+                                        <option value="MA">MA</option>
+                                        <option value="MZ">MZ</option>
+                                        <option value="MM">MM</option>
+                                        <option value="NA">NA</option>
+                                        <option value="NR">NR</option>
+                                        <option value="NP">NP</option>
+                                        <option value="NL">NL</option>
+                                        <option value="NC">NC</option>
+                                        <option value="NZ">NZ</option>
+                                        <option value="NI">NI</option>
+                                        <option value="NE">NE</option>
+                                        <option value="NG">NG</option>
+                                        <option value="NO">NO</option>
+                                        <option value="OM">OM</option>
+                                        <option value="PK">PK</option>
+                                        <option value="PA">PA</option>
+                                        <option value="PG">PG</option>
+                                        <option value="PY">PY</option>
+                                        <option value="PE">PE</option>
+                                        <option value="PH">PH</option>
+                                        <option value="PL">PL</option>
+                                        <option value="PT">PT</option>
+                                        <option value="PR">PR</option>
+                                        <option value="QA">QA</option>
+                                        <option value="KR">KR</option>
+                                        <option value="MD">MD</option>
+                                        <option value="RO">RO</option>
+                                        <option value="RU">RU</option>
+                                        <option value="RW">RW</option>
+                                        <option value="WS">WS</option>
+                                        <option value="SA">SA</option>
+                                        <option value="SN">SN</option>
+                                        <option value="RS">RS</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SL">SL</option>
+                                        <option value="SG">SG</option>
+                                        <option value="SK">SK</option>
+                                        <option value="SI">SI</option>
+                                        <option value="SB">SB</option>
+                                        <option value="SO">SO</option>
+                                        <option value="ZA">ZA</option>
+                                        <option value="ES">ES</option>
+                                        <option value="LK">LK</option>
+                                        <option value="SD">SD</option>
+                                        <option value="SZ">SZ</option>
+                                        <option value="SE">SE</option>
+                                        <option value="CH">CH</option>
+                                        <option value="SY">SY</option>
+                                        <option value="TW">TW</option>
+                                        <option value="TJ">TJ</option>
+                                        <option value="TH">TH</option>
+                                        <option value="TO">TO</option>
+                                        <option value="TT">TT</option>
+                                        <option value="TN">TN</option>
+                                        <option value="TR">TR</option>
+                                        <option value="TM">TM</option>
+                                        <option value="TC">TC</option>
+                                        <option value="TV">TV</option>
+                                        <option value="UG">UG</option>
+                                        <option value="UA">UA</option>
+                                        <option value="AE">AE</option>
+                                        <option value="GB">GB</option>
+                                        <option value="UY">UY</option>
+                                        <option value="UZ">UZ</option>
+                                        <option value="VE">VE</option>
+                                        <option value="VN">VN</option>
+                                        <option value="VG">VG</option>
+                                        <option value="VI">VI</option>
+                                        <option value="YE">YE</option>
+                                        <option value="ZM">ZM</option>
+                                        <option value="ZW">ZW</option>
+                                    </select>
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="country" data-valmsg-replace="true"></span>
+
+                                </div>
+
+
+                                <div class="col-4 col-md-2">
+                                    <input type="text" class="form-control" placeholder="Zip" data-toggle="tooltip" data-placement="right" data-html="true" title="<strong>Tip:</strong> Adding <em>Zipcode</em> improves response rate." autocomplete="no" data-val="true" data-val-maxlength="The field Postal Code must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" id="postalcode" maxlength="256" name="postalcode" value="">
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="postalcode" data-valmsg-replace="true"></span>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <hr />
+
+                            <div class="form-row">
+                                <div class="col-12 col-md-5">
+                                    <label class="control-label">Category *</label>
+                                    <div id="category_help" class="sidehelp">
+                                        Select a <strong>Category</strong> for the listing to be posted under.  You can also choose an alternate category if applicable
+                                        (Ex: Primary Category - Marketing, Alternate Category - Assistant)
+                                    </div>
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The category_employer_pref1 field is required." id="category_employer_pref1" name="category_employer_pref1">
+                                        <option value="0" selected="selected">Select</option>
+
+                                        <option value="100">Acting / Casting Call</option>
+                                        <option value="110">Assistant / Administrative</option>
+                                        <option value="120">Animation &amp; Graphic Design</option>
+                                        <option value="130">Broadcast Technical Operations</option>
+                                        <option value="140">Casting Office</option>
+                                        <option value="150">Development</option>
+                                        <option value="160">Digital/Print Publishing &amp; Writing</option>
+                                        <option value="170">Distribution &amp; Acquisition</option>
+                                        <option value="180">Editing &amp; Post Production</option>
+                                        <option value="190">Engineering</option>
+                                        <option value="200">Entertainer</option>
+                                        <option value="210">Equipment Sales &amp; Servicing</option>
+                                        <option value="220">Executive Level</option>
+                                        <option value="230">Fashion</option>
+                                        <option value="240">Film, Art, &amp; Music Festivals</option>
+                                        <option value="250">Finance &amp; Accounting</option>
+                                        <option value="260">General Labor</option>
+                                        <option value="270">Human Resources</option>
+                                        <option value="280">Instructor &amp; Education</option>
+                                        <option value="290">IT &amp; Technology Development</option>
+                                        <option value="300">Legal &amp; Business Affairs</option>
+                                        <option value="310">Marketing &amp; Advertising</option>
+                                        <option value="320">Music</option>
+                                        <option value="330">MCN/Streaming Content</option>
+                                        <option value="340">Public Relations</option>
+                                        <option value="350">Production Office</option>
+                                        <option value="360">Production Crew</option>
+                                        <option value="370">Radio &amp; Podcast</option>
+                                        <option value="380">Sales &amp; Business Development</option>
+                                        <option value="390">Sports</option>
+                                        <option value="400">Talent Agency &amp; Management</option>
+                                        <option value="410">Theater &amp; Live Entertainment</option>
+                                        <option value="420">TV &amp; Digital News</option>
+                                        <option value="430">TV Station</option>
+                                        <option value="440">TV Network / Studio</option>
+                                        <option value="450">Unions, Guilds, &amp; Trade Associations</option>
+                                        <option value="460">Video Game Development / Publishing</option>
+                                        <option value="470">Visual Effects</option>
+                                        <option value="480">Writing - TV / Film</option>
+
+
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-5">
+                                    <label class="control-label"><span class="form-label">Alternate Category</span></label><small>Optional</small>
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The category_employer_pref2 field is required." id="category_employer_pref2" name="category_employer_pref2">
+                                        <option value="0" selected="selected">Select</option>
+
+                                        <option value="100">Acting / Casting Call</option>
+                                        <option value="110">Assistant / Administrative</option>
+                                        <option value="120">Animation &amp; Graphic Design</option>
+                                        <option value="130">Broadcast Technical Operations</option>
+                                        <option value="140">Casting Office</option>
+                                        <option value="150">Development</option>
+                                        <option value="160">Digital/Print Publishing &amp; Writing</option>
+                                        <option value="170">Distribution &amp; Acquisition</option>
+                                        <option value="180">Editing &amp; Post Production</option>
+                                        <option value="190">Engineering</option>
+                                        <option value="200">Entertainer</option>
+                                        <option value="210">Equipment Sales &amp; Servicing</option>
+                                        <option value="220">Executive Level</option>
+                                        <option value="230">Fashion</option>
+                                        <option value="240">Film, Art, &amp; Music Festivals</option>
+                                        <option value="250">Finance &amp; Accounting</option>
+                                        <option value="260">General Labor</option>
+                                        <option value="270">Human Resources</option>
+                                        <option value="280">Instructor &amp; Education</option>
+                                        <option value="290">IT &amp; Technology Development</option>
+                                        <option value="300">Legal &amp; Business Affairs</option>
+                                        <option value="310">Marketing &amp; Advertising</option>
+                                        <option value="320">Music</option>
+                                        <option value="330">MCN/Streaming Content</option>
+                                        <option value="340">Public Relations</option>
+                                        <option value="350">Production Office</option>
+                                        <option value="360">Production Crew</option>
+                                        <option value="370">Radio &amp; Podcast</option>
+                                        <option value="380">Sales &amp; Business Development</option>
+                                        <option value="390">Sports</option>
+                                        <option value="400">Talent Agency &amp; Management</option>
+                                        <option value="410">Theater &amp; Live Entertainment</option>
+                                        <option value="420">TV &amp; Digital News</option>
+                                        <option value="430">TV Station</option>
+                                        <option value="440">TV Network / Studio</option>
+                                        <option value="450">Unions, Guilds, &amp; Trade Associations</option>
+                                        <option value="460">Video Game Development / Publishing</option>
+                                        <option value="470">Visual Effects</option>
+                                        <option value="480">Writing - TV / Film</option>
+
+
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <hr />
+
+                            <div class="form-row">
+                                <div class="col-md-12 col-sm-12">
+                                    <label class="control-label" for="description">Position Details</label>
+                                    <div id="description_help" class="sidehelp">
+                                        <strong>Position Details</strong> is required.  Please describe the position in at least 1 or 2 paragraphs.  The more detail in the description,
+                                        the better crop of candidates you will receive.
+
+                                        <ul>
+                                            <li>The opening sentence should be a summary of what you are looking for.</li>
+                                            <li>Do not use ALL CAPS or your listing will be Rejected</li>
+                                            <li>Describe the position duties, education and experience required, typical hours, salary level</li>
+                                            <li>
+                                                You can also expand the <em>Additional Position Details</em> section to further describe this listing
+                                                and target a specific crop of candidates
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div id="maindescription" style="margin-left: 1px">
+                                        <textarea contenteditable="true" class="form-control" style="min-height:200px;height:200px;" id="description" name="description">
+</textarea>
+                                    </div>
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="description" data-valmsg-replace="true"></span>
+
+                                </div>
+                            </div><!-- end row -->
+
+
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <ul class="accordion style-3 border-radius">
+                                        <li class="bg-grey-lightest">
+                                            <div id="positioninfo" class="accordion-title">
+                                                <h6 class="heading-uppercase">Additional Position Details</h6>
+                                            </div>
+                                            <div class="accordion-content">
+
+                                                <div class="form-row">
+                                                    <div class="col-12 col-md-4">
+
+                                                        <label class="control-label">Department</label>
+                                                        <input class="form-control" type="text" id="company_department" name="company_department" value="" />
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="company_department" data-valmsg-replace="true"></span>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-md-4">
+                                                        <label class="control-label">Code</label>
+                                                        <input class="form-control" type="text" data-val="true" data-val-maxlength="The field Job Code must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" id="company_jobcode" maxlength="256" name="company_jobcode" value="" />
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="company_jobcode" data-valmsg-replace="true"></span>
+
+                                                    </div>
+
+                                                    <div class="col-2 col-md-2">
+
+                                                        <label class="control-label" for="travelPercentage">Travel %</label>
+                                                        <input class="form-control" type="number" data-val="true" data-val-required="The Travel % field is required." id="travelPercentage" name="travelPercentage" value="0" />
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="travelPercentage" data-valmsg-replace="true"></span>
+
+                                                    </div>
+
+                                                </div><!-- end row -->
+
+                                                <div class="form-row">
+                                                    <div class="col-12 col-md-3">
+                                                        <label class="control-label">Salary Range</label>
+                                                        <input class="form-control" placeholder="$ Low" type="text" id="salary_range_low" name="salary_range_low" value="" />
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="salary_range_low" data-valmsg-replace="true"></span>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-md-3">
+                                                        <label class="control-label d-none d-md-inline-block">&nbsp;</label>
+                                                        <input class="form-control" placeholder="$ High" type="text" id="salary_range_high" name="salary_range_high" value="" />
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="salary_range_high" data-valmsg-replace="true"></span>
+                                                    </div>
+
+                                                    <div class="col-6 col-md-2">
+                                                        <label class="control-label d-none d-md-inline-block">Period</label>
+                                                        <select class="custom-select w-100" id="salary_timeperiod" name="salary_timeperiod">
+                                                            <option value="10">Per Year</option>
+                                                            <option value="20">Per Hour</option>
+                                                            <option value="30">Per Month</option>
+                                                            <option value="40">Per Week</option>
+                                                            <option value="50">Fixed Fee</option>
+                                                            <option value="999">Other</option>
+                                                        </select>
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="salary_timeperiod" data-valmsg-replace="true"></span>
+                                                    </div>
+
+                                                    <div class="col-6 col-md-2">
+                                                        <label class="control-label d-none d-md-inline-block">Type</label>
+                                                        <select class="custom-select w-100" id="salary_currency_type" name="salary_currency_type">
+                                                            <option value="10">$ USD</option>
+                                                            <option value="20">$ AUD</option>
+                                                            <option value="30">$ CAD</option>
+                                                            <option value="40">&#xA5; CNY</option>
+                                                            <option value="50">&#x20AC; EUR</option>
+                                                            <option value="60">&#xA3; GBR</option>
+                                                            <option value="70">$ HKD</option>
+                                                            <option value="80">&#xA5; JPY</option>
+                                                            <option value="90">$ MXN</option>
+                                                            <option value="100">&#x20BD; RUB</option>
+                                                            <option value="999">Other</option>
+                                                        </select>
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="salary_currency_type" data-valmsg-replace="true"></span>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <label class="control-label">Salary & Benefits Details </label>
+                                                        <textarea class="form-control" rows="5" placeholder="" id="salary_description" name="salary_description">
+</textarea>
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="salary_description" data-valmsg-replace="true"></span>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="col-md-12 col-sm-12">
+
+                                                        <label class="control-label">Position Requirements</label> <small>Educational / Experience</small>
+                                                        <textarea class="form-control" rows="5" placeholder="" id="educationRequirements" name="educationRequirements">
+</textarea>
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="educationRequirements" data-valmsg-replace="true"></span>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <label class="control-label">Application Instructions</label>
+                                                        <textarea class="form-control" rows="5" placeholder="" id="application_instructions" name="application_instructions">
+</textarea>
+                                                        <span class="text-danger field-validation-valid" data-valmsg-for="application_instructions" data-valmsg-replace="true"></span>
+                                                    </div>
+                                                </div><!-- end row -->
+
+                                                <div class="form-row">
+
+                                                    <div class="col-6 col-md-4 mb-3">
+
+
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" data-val="true" data-val-required="The Veteran Commitment field is required." id="veteran" name="veteran" value="true" />
+                                                            <label class="control-label custom-control-label" for="veteran">Veteran Commitment</label>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+
+                            <hr />
+
+
+                            <div class="form-row">
+                                <div class="col-sm-6 col-md-4">
+
+                                    <label for="exampleFormControlSelect1"><span class="form-label">Application Method</span></label>
+                                    <div id="company_url1_help" class="sidehelp bottom">
+                                        <strong>Application Method</strong> is required for us to send you candidate resumes.  Choose one of the following:
+                                        <ul>
+                                            <li><em>Use Company Email</em> will copy the email from the Company Email field and we will forward applications to that address.  Again, this email will never be shown to applicants.</li>
+                                            <li><em>Use Alternate Email</em> if you want to send applicants to a different address than your Company email (ex: AsstJobLA12@gmail.com)</li>
+                                            <li><em>Use Web Link</em> if you want use to redirect applicants to your own internal job system.  Please link to a specific listing, not a general careers page.</li>
+                                        </ul>
+
+                                    </div>
+
+                                    <select class="custom-select w-100" data-val="true" data-val-required="The Application Method field is required." id="application_format" name="application_format">
+
+                                        <option value="">Select</option>
+
+                                        <option value="1">Use Company Email</option>
+                                        <option value="2">User Alternate Email</option>
+                                        <option value="3">Use Web Link</option>
+                                    </select>
+
+
+
+
+
+
+                                </div>
+                                <div class="col-sm-12 col-md-8">
+                                    <div id="appurl" class="d-none">
+                                        <label class="control-label">&nbsp;</label> <small style="margin-left: -10px">Please link directly to the listing, not the main careers page</small>
+                                        <input type="text" class="form-control" placeholder="https://www.acme.com/job/123456" data-val="true" data-val-maxlength="The field application_url must be a string or array type with a maximum length of &#x27;2048&#x27;." data-val-maxlength-max="2048" id="application_url" maxlength="2048" name="application_url" value="">
+                                    </div>
+                                    <div id="appemail" class="d-none">
+                                        <label class="control-label d-none d-md-inline-block">&nbsp;</label>
+                                        <input type="text" class="form-control" placeholder="jane@doe.com" data-val="true" data-val-maxlength="The field Application Email must be a string or array type with a maximum length of &#x27;256&#x27;." data-val-maxlength-max="256" id="application_email_private" maxlength="256" name="application_email_private" value="">
+                                    </div>
+
+                                </div>
+                                <input type="hidden" id="hash_id" name="hash_id" value="" />
+                                <input type="hidden" id="categories" name="categories" value="" />
+                                <input type="hidden" data-val="true" data-val-required="The staffingfirm field is required." id="staffingfirm" name="staffingfirm" value="False" />
+                                <input type="hidden" data-val="true" data-val-required="The Date Posted field is required." id="datePosted" name="datePosted" value="3/18/2020 10:16:07 PM" />
+                                <input type="hidden" id="logo_base64" name="logo_base64" value="" />
+                                <input type="hidden" id="logo_image" name="logo_image" value="" />
+
+
+                            </div><!-- end row -->
+
+
+                            <hr />
+
+                            <div class="form-group row ">
+                                <div class="col-md-8">
+                                    <button type="submit" name="submit" class="btn btn-sm button-radius btn-primary mr-1" value="Submit">Preview</button>
+                                    <button id="btncancel" type="button" class="btn btn-sm button-radius btn-default mr-1" onclick="window.history.back();">Cancel</button>
+
+                                </div>
+                            </div>
+
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8HdNYYOklZxCoC2gFeyTPND4m3rxgIhd6OH-weOL3kXcT7ZsNjUKURrnl1wNsOsFXEnZSBWvLYQVXx_Gia4SagdXZCaV-kQ_oYFg_Ba_pibc1lRvsKrPC62sJn_ELfS5ItR5gWDeNXBw7m68GMF7wT8" /><input name="confidential" type="hidden" value="false" /><input name="veteran" type="hidden" value="false" />
+                        </form>
+
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </main>
+    <!-- end Body section -->
+    <footer>
+        <div class="section-sm bg-dark-lighter">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-left order-md-1">
+                        <h3 class="margin-0">showbizjobs</h3>
+                    </div>
+                    <div class="col-12 col-md-3 text-center text-md-right order-md-3">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 text-center order-md-2">
+                        <ul class="list-inline font-small uppercase font-weight-normal">
+                            <li><a class="text-link-7" href="../">Home</a></li>
+                            <li><a class="text-link-7" href="../Employer/">Employers</a></li>
+                            <li><a class="text-link-7" href="../Resources/">Support</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div>
+        <div class="section-xs bg-dark p-2">
+            <div class="container text-center">
+                <p>&copy; 2020 showbizjobs All Rights Reserved.</p>
+            </div><!-- end container -->
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- ***** JAVASCRIPT ***** -->
+    <!-- Plugins -->
+    <script src="../assets4/plugins/bootstrap/popper.min.js"></script>
+    <script src="../assets4/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script src="../lib/jquery.imagesloaded/imagesloaded-old.min.js"></script>
+    <script src="../assets4/js/functions2.js"></script>
+
+    <!-- Place your API Key in 'YOUR_API_KEY'
+    <!-- Scripts -->
+
+
+    <script>
+        window.fwSettings = {
+            'widget_id': 61000000445
+        };
+        !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
+    </script>
+    <script type='text/javascript' src='https://widget.freshworks.com/widgets/61000000445.js' async defer></script>
+
+    <script>
+
+        if ($("#greybox").length) {
+
+            $("#greybox").html("<h1>" + $("#greybox").width().toFixed(0) + " x " + $("#greybox").height().toFixed(0) + "");
+        }
+
+    </script>
+
+
+    <script src="../assets4/plugins/bootstrap4-toggle/bootstrap4-toggle.min.js"></script>
+
+
+
+    <script src="../lib/jquery-validate/jquery.validate.js"></script>
+    <script src="../lib/jquery-validate/additional-methods.js"></script>
+    <script src="../lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+
+
+
+
+
+    <script src="../lib/Trumbowyg/trumbowyg.min.js"></script>
+    <script src="../lib/Trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.min.js"></script>
+    <script src="../lib/Trumbowyg/plugins/allowtagsfrompaste/trumbowyg.allowtagsfrompaste.min.js"></script>
+
+    <script src="../lib/croppie/croppie.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVQ5GlfsT19J_M1CN8LBZTJNv_h-JeV-E&libraries=places&callback=initAutocomplete" async defer></script>
+
+    <script>
+
+
+        $('#uploadLogo').on('shown.bs.modal', function (e) {
+
+            //setTimeout(function () {
+            $('#upload-demo').croppie('bind');
+            //}, 2500);
+
+
+
+        })
+
+        var tempimage;
+
+        //Croppie
+        function logoUpload() {
+            var $uploadCrop;
+
+            function readFile(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.upload-demo').addClass('ready');
+                        $uploadCrop.croppie('bind', {
+                            url: e.target.result
+                        }).then(function () {
+                            console.log('jQuery bind complete');
+                            tempimage = e.target.result;
+                        });
+
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+
+
+                }
+                else {
+                    swal("Sorry - you're browser doesn't support the FileReader API");
+                }
+            }
+
+            $uploadCrop = $('#upload-demo').croppie({
+
+                viewport: {
+                    width: 150,
+                    height: 150,
+                    type: 'square'
+
+                },
+                maxZoomedCropWidth: 600,
+
+                enforceBoundary: false,
+                enableExif: true,
+
+            });
+
+            $('#upload').on('change', function () {
+                $('#uploadLogo').modal('toggle');
+                readFile(this);
+
+            });
+            $('#saveresult').on('click', function (ev) {
+
+                $uploadCrop.croppie('result', {
+                    type: 'canvas',
+                    size: 'viewport'
+                }).then(function (resp) {
+
+                    popupResult({
+                        src: resp
+                    });
+                });
+
+            });
+        }
+
+        function popupResult(result) {
+
+
+            if (result.src) {
+                $('#imageresult').html('<img src="' + result.src + '" />');
+                $('#logo_base64').val(result.src);
+            }
+
+            $('#uploadLogo').modal('toggle');
+
+        }
+
+
+
+        $('.logoshape').on('click', function () {
+
+
+            $(".logoshape").removeClass("selectedshape");
+
+            $(this).addClass("selectedshape");
+
+            switch ($(this).attr('id')) {
+
+                case "squareshape":
+                    $('#upload-demo').croppie('destroy');
+
+                    $uploadCrop = $('#upload-demo').croppie({
+
+                        viewport: {
+                            width: 150,
+                            height: 150,
+                            type: 'square'
+
+                        },
+                        enforceBoundary: false,
+                        enableExif: true,
+
+                    });
+
+                    $uploadCrop.croppie('bind', {
+                        url: tempimage
+                    })
+                    break;
+
+                case "hrectangleshape":
+                    $('#upload-demo').croppie('destroy');
+
+                    $uploadCrop = $('#upload-demo').croppie({
+
+                        viewport: {
+                            width: 200,
+                            height: 100,
+                            type: 'square'
+
+                        },
+                        enforceBoundary: false,
+                        enableExif: true,
+
+                    });
+
+                    $uploadCrop.croppie('bind', {
+                        url: tempimage
+                    })
+
+                    break;
+
+                case "vrectangleshape":
+                    $('#upload-demo').croppie('destroy');
+
+                    $uploadCrop = $('#upload-demo').croppie({
+
+                        viewport: {
+                            width: 100,
+                            height: 200,
+                            type: 'square'
+
+                        },
+                        enforceBoundary: false,
+                        enableExif: true,
+
+                    });
+
+                    $uploadCrop.croppie('bind', {
+                        url: tempimage
+                    })
+                    break;
+
+            }
+
+
+
+        });
+
+        //Google Places Search
+        var placeSearch, autocomplete, geocoder;
+
+        var componentForm = {
+            street_number: 'short_name',
+            route: 'long_name',
+            locality: 'long_name',
+            neighborhood: 'long_name',
+            administrative_area_level_1: 'short_name',
+            administrative_area_level_2: 'short_name',
+            country: 'short_name',
+            postal_code: 'long_name'
+        };
+
+        function initAutocomplete() {
+            geocoder = new google.maps.Geocoder();
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('locationsearch')),
+                { types: ['geocode'] }  /* {types: ['address']} */);
+
+
+            autocomplete.addListener('place_changed', fillInAddress);
+        }
+
+        function codeAddress(address) {
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == 'OK') {
+                    alert(results[0].geometry.location);
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+
+        function fillInAddress() {
+            $('#postalcode').tooltip('hide');
+
+            var place = autocomplete.getPlace();
+
+            var neighborhood = "";
+            var city = "";
+            var state = "";
+            var country = "";
+            var street_number = "";
+            var street_name = "";
+            var postal_code = "";
+
+
+
+
+            for (var i = 0; i < place.address_components.length; i++) {
+                var addressType = place.address_components[i].types[0];
+
+
+                switch (addressType) {
+                    case 'street_number':
+                        street_number = place.address_components[i][componentForm[addressType]];
+                        break;
+                    case 'route':
+                        street_name = place.address_components[i][componentForm[addressType]];
+                        break;
+                    case 'neighborhood':
+                        neighborhood = place.address_components[i][componentForm[addressType]];
+                        break;
+                    case 'locality':
+                        city = place.address_components[i][componentForm[addressType]];
+                        break;
+                    case 'administrative_area_level_1':
+                        state = place.address_components[i][componentForm[addressType]];
+                        break;
+                    case 'postal_code':
+                        postal_code = place.address_components[i][componentForm[addressType]];
+                        break;
+                    case 'country':
+                        country = place.address_components[i][componentForm[addressType]];
+                        break;
+                }
+
+
+
+            }
+
+            $('#address1').val(street_number + " " + street_name);
+            $('#city').val(city);
+            $('#neighborhood').val(neighborhood);
+            $('#state').val(state);
+            $('#country').val(country);
+            $('#postalcode').val(postal_code);
+
+            checkLocation();
+            //   codeAddress(document.getElementById('autocomplete').value);
+        }
+
+
+        //Trumbowyg - Initialize
+        $('textarea').trumbowyg({
+            btnsDef: {
+                align: {
+                    dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                    ico: 'justifyLeft'
+                }
+            },
+            tagsToRemove: ['script'],
+            btns: [
+                ['strong', 'em'],
+                ['align'],
+                ['unorderedList', 'orderedList'],
+                ['horizontalRule'],
+                ['removeformat']
+            ],
+            plugins: {
+                allowTagsFromPaste: {
+                    allowedTags: ['ul', 'ol', 'li', 'strong', 'p', 'br']
+                }
+            },
+
+            autogrow: true
+        });
+
+
+
+
+        var count = 0;
+        //Needed to fix validate bug
+        $("div.trumbowyg-editor").each(function (index) {
+            $("div.trumbowyg-editor").eq(count).attr('id', 'S' + count);
+            count++;
+        });
+
+
+        //Switch between Standard and Advanced Forms
+        function standardForm() {
+
+
+            if ($('#companyinfo').parent("li").hasClass("active")) {
+                $('#companyinfo').trigger("click");
+            }
+
+            if ($('#positioninfo').parent("li").hasClass("active")) {
+                $('#positioninfo').trigger("click");
+            }
+
+        }
+
+        function advancedForm() {
+
+
+            if (!$('#companyinfo').parent("li").hasClass("active")) {
+                $('#companyinfo').trigger("click");
+            }
+
+            if (!$('#positioninfo').parent("li").hasClass("active")) {
+                $('#positioninfo').trigger("click");
+            }
+
+        }
+
+
+        //Change Application Format options when selected
+        $('#application_format').change(function () {
+
+            checkApplicationMethod();
+
+        });
+
+        //Show help text
+        $(".form-control").click(function () {
+
+
+            var $this = $(this.previousElementSibling);
+
+            var ww = document.body.clientWidth;
+
+            if (ww > 1000) {
+
+                if ($this.hasClass("sidehelp")) {
+
+                    $(".sidehelp").hide();
+                    $this.fadeIn("slow");
+
+                }
+                else {
+                    $(".sidehelp").hide();
+                }
+
+            }
+
+        });
+
+        function checkLocation() {
+
+            //if ($('#city').val().length > 1) {
+
+            //    $('#city').prop('readonly', false);
+            //    $('#state').prop('readonly', false);
+            //    $('#country').prop('disabled', false);
+            //    $('#postalcode').prop('readonly', false);
+
+            //}
+            //else {
+
+
+            //    $('#city').prop('readonly', true);
+            //    $('#state').prop('readonly', true);
+            //    $('#country').prop('disabled', true);
+            //    $('#postalcode').prop('readonly', true);
+
+            //}
+
+
+
+            if ($('#city').val() != "" && $('#postalcode').val() == "") {
+                $('#postalcode').tooltip('show');
+            }
+
+
+        }
+
+
+        function checkApplicationMethod() {
+
+            switch ($('#application_format').val()) {
+                case "1":
+                    $('#appemail').removeClass('d-none');
+
+                    $('#application_email_private').prop('readonly', true);
+                    $('#application_email_private').val($('#posting_email_private').val());
+
+                    $('#appurl').addClass('d-none');
+
+                    $('#listing_url').val('');
+
+
+
+                    break;
+                case "2":
+                    $('#appemail').removeClass('d-none');
+                    $('#application_email_private').prop('readonly', false);
+                    $('#appurl').addClass('d-none');
+
+                    $('#application_email_private').val('');
+                    $('#listing_url').val('');
+
+
+                    break;
+                case "3":
+                    $('#appemail').addClass('d-none');
+                    $('#appurl').removeClass('d-none');
+
+                    $('#application_email_private').val('');
+
+                    break;
+                default:
+                // code block
+            }
+        }
+
+        function checkAccordians() {
+            if (($('#company_background').val().length > 0) || ($('#company_careerspage_url').val().length > 0) ||
+                ($('#company_department').val().length > 0) || ($('#company_jobcode').val().length > 0) ||
+                ($('#salary_range_low').val().length > 0) || ($('#salary_range_high').val().length > 0) ||
+                ($('#educationRequirements').val().length > 0) || ($('#salary_description').val().length > 0) ||
+                ($('#application_instructions').val().length > 0)) {
+                $('#companyinfo').trigger("click");
+
+                $('#advancedtab').addClass('active');
+                $('#standardtab').removeClass('active');
+
+            }
+
+
+        }
+
+
+        ////Fixes checkboxes
+        //$('input[type="checkbox"]').change(function () {
+        //    this.value = (Number(this.checked));
+        //});
+
+        //Set tooltip to manual for this item
+        $('#postalcode').tooltip({
+            trigger: 'manual',
+
+        }).tooltip('hide');
+
+        //Stuff to do when page is loaded
+
+        $(document).ready(function () {
+            //Disable enter key from submitting the form.
+            $('input').keydown(function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+            checkApplicationMethod();
+            checkLocation();
+            checkAccordians();
+            logoUpload();
+
+
+
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
+

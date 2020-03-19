@@ -1,0 +1,2319 @@
+﻿
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Job Board">
+    <meta name="keywords" content="">
+    <title>Jobs | JobBoard</title>
+    <!-- Favicon -->
+    <link href="../favicon.ico" rel="shortcut icon">
+
+    <!-- CSS -->
+
+    <link href="../assets4/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets4/css/app.css" rel="stylesheet">
+
+    <!-- Fonts/Icons -->
+    <link href="../assets4/plugins/font-awesome/css/all.css" rel="stylesheet">
+    <link href="../assets4/plugins/themify/themify-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="../css/pagedlist.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+
+    <style>
+    </style>
+
+
+    <style>
+
+
+        .smalllogo {
+            max-height: 80px;
+            margin-top: 10px;
+        }
+
+        .joblistingitem.card em {
+            font-weight: 700;
+        }
+
+        .threeline {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+            .threeline em {
+                color: #007bff;
+                font-weight: 600;
+            }
+
+
+
+        .featuredjob {
+            background-color: #f0f8ff;
+        }
+
+            .featuredjob .threeline {
+                -webkit-line-clamp: 5;
+            }
+
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        #map {
+            height: 400px; /* The height is 400 pixels */
+            width: 100%; /* The width is the width of the web page */
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+<body class="bg-grey-lightest ">
+
+
+    <meta charset="utf-8">
+
+
+    <header>
+
+
+        <nav class="navbar navbar-dark">
+            <div class="container">
+                <div class="navbar-brand" href="../">
+                    <img src="../assets4/images/shutterlogo3-sm-white.png" />
+                    <h5>showbizjobs</h5>
+
+
+                </div>
+                <ul class="nav m-auto text-white-01 dropdown-icon-arrow">
+
+                    <!-- add 'dropdown-dark/dropdown-grey/dropdown-transparent/dropdown-transparent-dark' -->
+                    <!-- Basic link -->
+                    <!-- Dropdown -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Login?returnurl=%2FJobs%2FLocation%2FCity%2FLos%2520Angeles"><i class="fa fa-unlock mr-2"></i> Login</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Register"><i class="fa fa-user-plus mr-2"></i> Sign Up</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Jobs/Explore">Explore Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Internships/Explore">Explore Internships</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link" href="../Resources/">Advice</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">How To Use The Site</a></li>
+                            <li><a href="#">Membership Features</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Application Help</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/ResumeTips">Resume Tips</a>
+                                    <a href="../Resources/CoverLetterTips">Cover Letter Tips</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Step by Step Guides</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Job Alerts</a>
+                                    <a href="../Resources/">Changing ID / Password</a>
+                                    <a href="../Resources/">Canceling Membership</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Avoiding Scams</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Talent Agency / Acting Scams</a>
+                                    <a href="../Resources/">Production Assistant Scams</a>
+                                    <a href="../Resources/">Overseas Work Scams</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Industry Articles</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Breaking into Entertainment</a>
+                                    <a href="../Resources/">Changing Careers</a>
+                                    <a href="../Resources/">More Articles...</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+
+                </ul><!-- end nav -->
+                <!-- Icons -->
+                <ul class="list-horizontal-unstyled">
+                    <li class="ml-2 d-none d-lg-inline">
+
+                        <a href="#" class="button button-xs button-grey text-dark button-radius button-hover-float mt-0" data-toggle="modal" data-target="#register-modal"><i class="fa fa-user-plus"></i> Sign Up</a>
+
+                    </li>
+                    <li class="ml-2 d-none d-lg-inline">
+                        <a class="button button-xs button-white text-dark button-radius button-hover-float" href="../Identity/Account/Login?returnurl=%2FJobs%2FLocation%2FCity%2FLos%2520Angeles"><i class="fa fa-unlock"></i> Login</a>
+                    </li>
+
+                </ul>
+
+                <!-- Nav Toggle button -->
+                <button class="nav-toggle-btn position-right">
+                    <span class="lines"></span>
+                </button>
+            </div><!-- end container -->
+        </nav>
+
+    </header>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="font-14 fa fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="text-center mb-4">
+                        <h4>Choose Your Account Type</h4>
+                        <a class="button btn button-xl button-dark mr-3" href="../Identity/Account/Register">Job Seeker</a><a class="button button-xl btn btn-info" href="../Identity/Account/Register?UserType=Employer">Employer</a>
+                    </div>
+
+                </div>
+
+
+
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!-- end modal -->
+    <!-- Breadcrumb -->
+
+    <div class='bg-secondary pt-3 pb-3'> <div class='container'> <div class='row'> <div class='col-12 col-md-9'> <nav class='text-left pl-2'> <ul class='breadcrumb'><li class='breadcrumb-item text-white'><a href='/'>Home</a></li><li class='breadcrumb-item'><a href='/Jobs/Explore'>Jobs</a></li></ul> </nav> </div> <div class='col-md-3 text-right d-none d-lg-block'><a href='/Employer' class='heading-uppercase'>Employer? Click Here</a> </div> </div> </div> </div>
+
+
+
+    <!-- Body section -->
+
+    <main id="content" role="main">
+
+
+
+
+
+
+
+
+        <div class="bg-grey-gradient-top" style="padding: 10px 0 5px 0;">
+            <div class="container">
+                <form method="get" class="form-style-2" autocomplete="off" action="/Search">
+                    <div class="row">
+
+                        <div class="col-12 col-lg-3 mb-1 text-lg-right">
+                            <h5 class="font-weight-500 col-form-label">Search Listings</h5>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3 mb-1">
+                            <label for="Keyword" class="sr-only">Keyword</label>
+                            <input type="text" class="form-control" name="searchstring" placeholder="Job Title, Company, or Keyword" value="">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-1">
+                            <label for="Location" class="sr-only">Location</label>
+                            <input type="text" class="form-control" name="location" placeholder="City or Zip" value="">
+
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <button type="submit" class="btn button-sm btn-secondary mb-2">Search</button>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 col-lg-9 offset-lg-3">
+
+                            <label class="mr-3 float-left text-uppercase font-weight-bolder font-13">Quick Search: </label>
+
+                            <ul class="list-inline-vbar font-13 mb-2">
+                                <li><a class="hyperlink-8" href="../Jobs/PostedDate/Day">New Jobs</a></li>
+                                <li><a class="hyperlink-8" href="../Jobs/Location/City/Los%20Angeles">LA Jobs</a></li>
+                                <li><a class="hyperlink-8" href="../Jobs/Location/City/New%20York">NYC Jobs</a></li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="collapse" id="mapCollapse">
+            <div id="map"></div>
+        </div>
+
+
+
+
+        <div id="joblisting" class="section-sm bg-grey">
+            <div class="container">
+
+                <div class="row col-spacing-70">
+                    <!-- Main Section -->
+                    <div class="col-12 col-lg-9 order-2">
+                        <div class="row">
+                            <div class="col-12 col-md-8 col-lg-9 mb-1">
+                                <h1 class="font-weight-bold line-height-100">Jobs <span class="ml-3 heading-uppercase font-14 font-weight-600"></span></h1>
+                                <h2 class="heading-uppercase font-14 font-weight-600">Filter: Los Angeles </h2>
+
+
+
+                                <p class="font-13"><strong>Showing 1 - 25 of 885 postings found</strong></p>
+
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-3">
+
+                                <button id="btn_map" class="btn btn-md btn-primary float-md-right button-radius mt-md-4" href="#" onclick="ToggleMap();">
+                                    <i class="fas fa-map-marker-alt mr-2"></i><span id="btn_map_text">Show Map</span>
+                                </button>
+                            </div>
+                            <div class="col-12 mb-0">
+
+
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/h/hulu/hulu-logo-2020-74576.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/d99ekd">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Associate HRIS Analyst</h5>
+                                                    <h6>Hulu</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Santa Monica, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>Posted Today</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    SUMMARY
+
+                                                    Hulu’s TAO (Talent & Organization) team is seeking an Associate HRIS Analyst who will be an outstanding addition to our People Analytics team. As an Associate HRIS Analyst, you will be the key resource for ensuring internal controls are compliant and fielding audit requests, work within the HRIS team to champion the quality and integrity of data collected, collaborate with the other are...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/s/sinclairbroadcastgroup/sinclairbroadcastgroup-logo-2020-23298.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/ro65pr">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Regional National Sales Assistant - LA</h5>
+                                                    <h6>Sinclair Broadcast Group</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>Posted Today</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    Sinclair Broadcast Group has an exciting opportunity for a Regional Sales Assistant. If you would like to work in the exciting business of Television Sales, this could be the job for you.
+
+                                                    Responsibilities:
+                                                    • Entering and maintaining orders received from our national advertisers
+                                                    • Regular communication with the National Sales Manager, with National Agencies, and with other station departm...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/w/warnermedia/warnermedia-logo-2020-80080.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/rn4jmd">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Sr. Financial Analyst, Accounting &amp; Reporting - TV Distribution</h5>
+                                                    <h6>Warner Media</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Burbank, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>Posted Today</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Job
+
+                                                    Warner Bros. Domestic Television Distribution is one of the world's largest distributors of feature films, television programs and animation to the domestic television marketplace (broadcast, pay cable, basic cable, satellite, pay-per-view, subscription video-on-demand, digital platforms, etc.). The company seeks a detailed, proactive, team-oriented Senior Financial Analyst, Enterpri...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/s/showtime/showtime-logo-2020-13607.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/g3m25d">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Coordinator, Awards &amp; Corporate Affairs</h5>
+                                                    <h6>Showtime</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>West Hollywood, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>Posted Today</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Coordinator position will support the Awards and Corporate Affairs department; reporting into the network's head of Awards and Corporate Affairs. The ideal candidate possesses superior organizational and communication skills and operates with impeccable attention to detail. The qualified candidate is able to effectively balance shifting demands with dynamic schedules, multitask in a fast-pace...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/n/netflix/netflix-logo-2020-10668.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/dybeqr">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Manager, Dubbing Operations - Animation</h5>
+                                                    <h6>Netflix</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The International Dubbing team is responsible for getting amazing programs to Netflix's growing international audience. Centered around dubbing/VO production, a great team environment, and cutting-edge technology, this group is critical to our ability to provide the best dubbed experience to our global subscribers. International Dubbing is responsible for supervising all aspects of dubbing produc...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/f/fandango/fandango-logo-2020-18559.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gx5vqr">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Sr. Analyst</h5>
+                                                    <h6>Fandango</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Beverly Hills, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    Responsibilities
+                                                    Fandango seeks an experienced, talented, and passionate Senior Analyst to join our growing Analytics team. The ideal candidate will have exceptional quantitative skills, a passion for data analysis, and the ability to synthesize learnings into actionable insights across the RottenTomatoes, MovieClips, Fandango ticketing, and home entertainment brands.
+
+                                                    Responsibilities:
+                                                    •...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/f/fandango/fandango-logo-2020-18559.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gk5ppg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Sr. Analyst</h5>
+                                                    <h6>Fandango</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Beverly Hills, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    Responsibilities
+                                                    Fandango seeks an experienced, talented, and passionate Senior Analyst to join our growing Analytics team. The ideal candidate will have exceptional quantitative skills, a passion for data analysis, and the ability to synthesize learnings into actionable insights across the RottenTomatoes, MovieClips, Fandango ticketing, and home entertainment brands.
+
+                                                    Responsibilities:
+                                                    •...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/s/sonypictures/sonypictures-logo-2020-11327.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gpw5xd">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">QA Manager - Technology &amp; Platform</h5>
+                                                    <h6>Sony Pictures</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Culver City, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The QA Manager is a self-starter who can ambitiously lead and manage a diverse list of duties within the evolving digital landscape.  This role will be responsible for overseeing Quality Assurance activities both internal and external as well as managing the flow of content into the core platform.  The QA manager will report to the Vice President of New Media Technology.
+
+                                                    Responsibilities:
+                                                    ...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/s/sonypictures/sonypictures-logo-2020-11327.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/rn43md">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Director Technology, New Media</h5>
+                                                    <h6>Sony Pictures</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Culver City, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Director, Technology reports to Vice President New Media Technology in the Sony Pictures New Media group. The Director of Technology will engage at an engineering level in a range of technology projects with internal teams and 3rd party companies.  The New Media group is focused on creating technology solutions that create new business opportunities as well as developing the core Privilege Pl...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/h/hulu/hulu-logo-2020-74576.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/ren40r">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Information Security Engineer</h5>
+                                                    <h6>Hulu</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Santa Monica, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    SUMMARY
+
+                                                    Hulu's Information Security team is seeking an Associate Application Security Engineer who will be an outstanding addition to our department. As an Associate Application Security Engineer at Hulu, you will ensure the proper security posture for Hulu's internal and external applications by serving as the interface between Development and Security Teams. The right person for this role ...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/h/hulu/hulu-logo-2020-74576.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/r0pejg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Senior Strategist, Branded Entertainment</h5>
+                                                    <h6>Hulu</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Santa Monica, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    SUMMARY
+
+                                                    Hulu is seeking a Senior level Creative and Content Marketing Strategist to join the marketing team in our Los Angeles office. This is a senior position that will be an integral participant to the branded entertainment team.
+
+                                                    You will collaborate with multiple internal teams (content, social, sales, research, production) to deliver break through creative ideas that are surfaced o...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/d/deluxe/deluxe-logo-2020-74128.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/rzq6qr">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Biller</h5>
+                                                    <h6>Deluxe</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Burbank, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    We currently have an opening for a Biller.  This position will be located in Burbank, CA.
+
+                                                    SUMMARY:
+
+                                                    The Billing Clerk will be assist in and be responsible for preparing/processing billing transactions and invoices and helping to resolve customer disputes.  Responsibilities include but are not limited to the following:
+
+                                                    RESPONSIBILITIES:
+                                                    • Read, prepare and process work orders for D...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/f/foxsports/foxsports-logo-2020-53963.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/g4mzyg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Segment Producer, First Things First</h5>
+                                                    <h6>Fox Sports</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    JOB DESCRIPTION
+                                                    We are seeking an experienced Segment Producer to join our First Things First team in Los Angeles. As our Segment Producer, you will work with the show producers to find topics and video elements.  You will get a head start each day in sending ideas to the NY producers. The Segment Producer will also oversee and manage the LA video team. Ultimately, you will serve as the right-h...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/f/foxsports/foxsports-logo-2020-53963.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/g6e2nr">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Segment Producer, The Herd</h5>
+                                                    <h6>Fox Sports</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    JOB DESCRIPTION
+                                                    We are seeking a Segment Producer for The Herd in Los Angeles. As our Segment Producer, you will work with show talent and producers to inject creativity into the show. You will have an active part in pitching ideas to advance discussion surrounding headlines and developing scripts following the morning meeting.  In addition, you will line produce some segments. Under the guidan...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/b/buzzfeed/buzzfeed-logo-2020-70546.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gqpb6r">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Casting Producer - EKO</h5>
+                                                    <h6>Buzzfeed</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Role
+
+                                                    BuzzFeed is looking for a fixed-term Casting Producer to support our growing Casting Team, with a particular focus on interactive video. This role reports directly to the Sr. Casting Producer and supports them  in the day-to-day casting for Eko. This is a great opportunity to join a fun-loving team doing groundbreaking work in the interactive video and online space. The position wi...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/s/sonypictures/sonypictures-logo-2020-11327.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/d8mzkg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Senior Business Analyst - Business Relationship Management</h5>
+                                                    <h6>Sony Pictures</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Culver City, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    Senior Business Analyst – Business Relationship Management
+
+                                                    Sony Pictures Entertainment (SPE) is looking for a Senior Business Analyst to join the IT team supporting the Content Mastering &amp; Delivery Group.  This position requires a combination of strong technical background and business acumen to effectively manage relationships between the Business and IT, as well as support the day-to-d...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/h/hbo/hbo-logo-2020-80695.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/d99xkd">
+                                                    <h6 class="heading-uppercase">Temporary Job</h6>
+                                                    <h5 class="font-weight-bold">Digital Ops Coordinator</h5>
+                                                    <h6>HBO</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Burbank, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Job
+
+                                                    The Digital Operations Coordinator will track digital marketing assets and integrate them into HBOMax.com for Max originals. Key Responsibilities. The Digital Operations Coordinator will ensure Max originals marketing content inside HBOMax.com is accurate, comprehensive, easy-to-use, and beautiful. They will manage relationships with Programming, Marketing, and Design to help ensure ...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/f/foxsports/foxsports-logo-2020-53963.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/d2vq5g">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Executive Director, Project Management</h5>
+                                                    <h6>Fox Sports</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    JOB DESCRIPTION
+                                                    From coordinating with our Engineering management to ensure effective project execution and coordination of resources, to collaborating with our project team, customers, and management to ensure every project is on track, we are seeking an experienced Executive Director of Project Management to join our team in Los Angeles. As our Executive Director, you will lead the planning a...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/n/netflix/netflix-logo-2020-10668.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gk59pg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Director Of Product Innovation, Animation</h5>
+                                                    <h6>Netflix</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    We are looking for a Senior Product Leader to develop operational and innovative Animation products for our Animation studio. Leaning on a proven track record in product management or technical Animation strategy, we expect this leader to refine and drive our product vision for what Animation products look like within our studio. These efforts will include managing a team of product managers with...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/n/netflix/netflix-logo-2020-10668.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/rn4pmd">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Director, Real Estate Portfolio &amp; Analysis</h5>
+                                                    <h6>Netflix</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    It's an amazing time to join Netflix as we continue shaping the future of global entertainment, bringing new stories to millions of people worldwide. To support our global expansion, we are looking for a seasoned Real Estate Portfolio and Analysis Leader.
+
+                                                    As part of the global Real Estate &amp; Workplace team, you will be responsible for long term real estate master planning, understanding b...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+                                    <span class="member bg-danger">Member</span>
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/h/hbo/hbo-logo-2020-80695.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/d99o9d">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Director, Creative Marketing - Program Marketing</h5>
+                                                    <h6>HBO</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Burbank, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>1 day ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Director, Creative Marketing for HBO Max Program Marketing will be responsible for developing the breakthrough creative content across all platforms (social, digital, experiential and media placements) for promoting Max Originals on and off the service. From initial creative concepting to seeing the campaigns through execution, this creative lead will ensure creative aligns with strategies, t...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/f/fox/fox-logo-2020-55588.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/r1n7xg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Manager, Data Analysis</h5>
+                                                    <h6>Fox</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>2 days ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    JOB DESCRIPTION
+                                                    Manager, Data Analysis
+
+                                                    Fox Entertainment is looking for a Manager of Data Analysis to join the company to be responsible for product management of FOX Entertainment's business intelligence platform, ensuring that data is timely, accurate, complete, and accessible to bicoastal users during their working hours.
+
+                                                    Additionally, you will be responsible for processing diverse...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/n/netflix/netflix-logo-2020-10668.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gmqevd">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Associate, Marketing FP&amp;A - Consolidation &amp; Technology</h5>
+                                                    <h6>Netflix</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>2 days ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    The Marketing Financial Planning &amp; Analysis (MFP&amp;A) team is looking for an Associate to join our team in Los Angeles. This position will focus on global marketing expense and cash forecasts, budget management, consolidated reporting, strategic financial modeling, and technology enhancements. Marketing leadership relies on the MFP&amp;A team to accurately forecast expenses as well as infor...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/a/amazonstudios/amazonstudios-logo-2020-8697.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/gk5qqg">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Head Of Movies Production</h5>
+                                                    <h6>Amazon Studios</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Culver City, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>2 days ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    Amazon Studios is hiring a Head of Movies Production to support original film production in the United States. Amazon Studios is the film development and production arm of Amazon.com. Over the past 6 years, we have debuted award-winning and ground-breaking programming like Manchester by the Sea, The Big Sick, and Late Night.
+
+                                                    The US Head of Movies Production will be responsible for overseeing...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+                                <div class="joblistingitem card ">
+
+
+
+
+
+                                    <div class="card-body">
+
+
+                                        <div class="row">
+
+                                            <div class="col-12 col-md-2 ">
+                                                <div class="companylogo_sm flex-column justify-content-center text-center">
+                                                    <img class="smalllogo mx-auto" src="https://dynacareersstorage1.blob.core.windows.net/logos/n/netflix/netflix-logo-2020-10668.png" alt="">
+
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-md-9">
+                                                <a href="../Posting/Details/g6e3qr">
+                                                    <h6 class="heading-uppercase">Full Time Job</h6>
+                                                    <h5 class="font-weight-bold">Marketing Manager, Series Strategy</h5>
+                                                    <h6>Netflix</h6>
+                                                    <p class="card-text">
+                                                        <span class="mr-4 font-13 font-weight-500">
+                                                            <i class="fa fa-map-marker-alt mr-2"></i>Los Angeles, CA
+                                                        </span>
+                                                        <span class="font-13 font-weight-500"><i class="fa fa-clock mr-2"></i>2 days ago</span>
+                                                    </p>
+
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 offset-lg-2 col-lg-9">
+
+                                                <p class="font-14 threeline">
+
+                                                    It's an amazing time to be joining Netflix as we continue to transform entertainment globally.  Members can watch as much as they want, anytime, anywhere, on any internet-connected screen. Members can play, pause and resume watching, all without commercials or commitments.
+
+                                                    The Netflix marketing team is looking for a talented strategic marketing leader who has experience in developing 360 cam...
+
+
+                                                </p>
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="mb-1">&nbsp;</div>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="col-12">
+
+                                <nav>
+
+
+                                    <div class="text-center pagination-container"><ul class="justify-content-center hover-style-2 layout-2 pagination"><li class="page-item active"><span class="page-link">1</span></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=2">2</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=3">3</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=4">4</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=5">5</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=6">6</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=7">7</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=8">8</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=9">9</a></li><li class="page-item"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=10">10</a></li><li class="page-item disabled PagedList-ellipses"><a>&#8230;</a></li><li class="page-item PagedList-skipToNext"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=2" rel="next">></a></li><li class="page-item PagedList-skipToLast"><a class="page-link" href="../Jobs/Location/City/Los%20Angeles?p=36">>></a></li></ul></div>
+
+                                </nav>
+
+
+                                <div class="font-13 text-center">
+                                    Page 1 of 36
+                                </div>
+
+
+                            </div>
+
+
+
+
+                        </div><!-- end row -->
+
+
+
+                    </div>
+                    <!-- end Main Section -->
+                    <!--  Sidebar -->
+
+
+                    <div class="col-12 col-lg-3 order-lg-1 order-3 sidebar-wrapper mt-0 p-lg-0">
+
+                        <form method="get" id="filterform">
+
+                            <input type="hidden" name="searchstring" value="" />
+                            <input type="hidden" name="location" value="" />
+
+
+                            <ul class="list-unstyled mb-4">
+                                <li>
+                                    <h5 class="font-weight-bold mb-0">Filters</h5>
+                                    <div class="">
+                                        <button type="submit" class="btn btn-primary"><span class="d-xl-none">Apply</span><span class="d-none d-xl-block">Apply Filters</span></button>
+                                        <button class="btn btn-secondary" onclick="$('input:checkbox:checked').prop('checked', false); $('#filterform').submit();"><span class="d-xl-none">Clear</span><span class="d-none d-xl-block">Clear Filters</span></button>
+
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+
+                            <div style="padding: 0 20px;">
+
+                                <ul class="accordion style-2">
+
+
+
+
+                                    <li id="cityaccordion" class="active">
+                                        <div class="accordion-title">
+                                            <h6 class="heading-uppercase">City</h6>
+                                        </div>
+                                        <div class="accordion-content">
+
+                                            <div id="top5cities">
+
+
+
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationBeverly Hills" name="city2" value="Beverly Hills">
+                                                    <label class="custom-control-label" for="LocationBeverly Hills">
+                                                        Beverly Hills
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationBurbank" name="city2" value="Burbank">
+                                                    <label class="custom-control-label" for="LocationBurbank">
+                                                        Burbank
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationCentury City" name="city2" value="Century City">
+                                                    <label class="custom-control-label" for="LocationCentury City">
+                                                        Century City
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationCulver City" name="city2" value="Culver City">
+                                                    <label class="custom-control-label" for="LocationCulver City">
+                                                        Culver City
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationGlendale" name="city2" value="Glendale">
+                                                    <label class="custom-control-label" for="LocationGlendale">
+                                                        Glendale
+                                                    </label>
+                                                </div>
+                                                <button id="btnmorecities" class="btn btn-xxs button-radius btn-default mt-2" type="button" aria-expanded="false" aria-controls="moreCities" onclick="showallCities()">
+                                                    Show More
+                                                </button>
+                                            </div><div id='moreCities' style='display: none'>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationHollywood" name="city2" value="Hollywood">
+                                                    <label class="custom-control-label" for="LocationHollywood">
+                                                        Hollywood
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationLos Angeles" name="city2" value="Los Angeles">
+                                                    <label class="custom-control-label" for="LocationLos Angeles">
+                                                        Los Angeles
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationPlaya Vista" name="city2" value="Playa Vista">
+                                                    <label class="custom-control-label" for="LocationPlaya Vista">
+                                                        Playa Vista
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationSanta Monica" name="city2" value="Santa Monica">
+                                                    <label class="custom-control-label" for="LocationSanta Monica">
+                                                        Santa Monica
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationStudio City" name="city2" value="Studio City">
+                                                    <label class="custom-control-label" for="LocationStudio City">
+                                                        Studio City
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationUniversal City" name="city2" value="Universal City">
+                                                    <label class="custom-control-label" for="LocationUniversal City">
+                                                        Universal City
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="LocationWest Hollywood" name="city2" value="West Hollywood">
+                                                    <label class="custom-control-label" for="LocationWest Hollywood">
+                                                        West Hollywood
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </li>
+
+
+
+                                    <li class="">
+                                        <div class="accordion-title">
+                                            <h6 class="heading-uppercase">Experience Level</h6>
+                                        </div>
+
+                                        <div class="accordion-content">
+
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="ExperienceLevel" id="ExperienceLevel1" value="1">
+                                                <label class="custom-control-label" for="ExperienceLevel1">
+                                                    Entry (0-2 years)
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="ExperienceLevel" id="ExperienceLevel4" value="4">
+                                                <label class="custom-control-label" for="ExperienceLevel4">
+                                                    Mid (2-5 years)
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="ExperienceLevel" id="ExperienceLevel9" value="9">
+                                                <label class="custom-control-label" for="ExperienceLevel9">
+                                                    Senior (5-10 years)
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="ExperienceLevel" id="ExperienceLevel11" value="11">
+                                                <label class="custom-control-label" for="ExperienceLevel11">
+                                                    Executive (10&#x2B; years)
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="mb-5">
+                                        <div class="accordion-title">
+                                            <h6 class="heading-uppercase">Job Type</h6>
+                                        </div>
+
+                                        <div class="accordion-content">
+
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="EmploymentType" id="EmploymentType1" value="1">
+                                                <label class="custom-control-label" for="EmploymentType1">
+                                                    Full Time
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="EmploymentType" id="EmploymentType2" value="2">
+                                                <label class="custom-control-label" for="EmploymentType2">
+                                                    Part Time
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="EmploymentType" id="EmploymentType3" value="3">
+                                                <label class="custom-control-label" for="EmploymentType3">
+                                                    Contract
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" name="EmploymentType" id="EmploymentType5" value="5">
+                                                <label class="custom-control-label" for="EmploymentType5">
+                                                    Temporary
+                                                </label>
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+
+
+
+
+
+                                </ul>
+
+                            </div>
+
+
+
+
+
+
+
+                        </form>
+
+
+
+                        <!--  Ad -->
+                        <img class="adimage" src="../assets4/images/col-3-square.jpg" alt="">
+                        <!--  End Ad -->
+
+
+                        <div class="sidebar-box bg-white border-radius box-shadow-with-hover">
+                            <h6 class="heading-uppercase">Subscribe</h6>
+                            <form>
+                                <input type="text" placeholder="Email Address.." name="email" required="">
+                                <button class="button button-lg button-grey button-fullwidth">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end Sidebar -->
+
+                </div><!-- end row -->
+
+
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="member-modal" tabindex="-1" role="dialog" aria-labelledby="memberLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning">
+                        <h5 class="modal-title" id="memberModalLabel">Subscribers Only</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+
+                        <div class="d-flex justify-content-center">
+                            <h6 class="font-weight-light text-center">
+                                Maps are a premium feature available to Subscribers Only.<br />
+                            </h6>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="modal-footer d-flex justify-content-center">
+                        <div class="">
+
+                            <a class="mr-1 btn button-md btn-success" href="../Identity/Account/Register">Sign Up For Subscription</a>
+                            <a class="mr-1 btn button-md btn-primary" href="../Identity/Account/Login?returnurl=%2FJobs%2FLocation%2FCity%2FLos%2520Angeles">Login</a>
+                        </div>
+
+
+                    </div>
+
+                </div><!-- end modal-content -->
+            </div><!-- end modal-dialog -->
+        </div><!-- end modal -->
+
+
+
+
+
+    </main>
+    <!-- end Body section -->
+    <footer>
+        <div class="section-sm bg-dark-lighter">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-left order-md-1">
+                        <h3 class="margin-0">showbizjobs</h3>
+                    </div>
+                    <div class="col-12 col-md-3 text-center text-md-right order-md-3">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 text-center order-md-2">
+                        <ul class="list-inline font-small uppercase font-weight-normal">
+                            <li><a class="text-link-7" href="../">Home</a></li>
+                            <li><a class="text-link-7" href="../Employer/">Employers</a></li>
+                            <li><a class="text-link-7" href="../Resources/">Support</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div>
+        <div class="section-xs bg-dark p-2">
+            <div class="container text-center">
+                <p>&copy; 2020 showbizjobs All Rights Reserved.</p>
+            </div><!-- end container -->
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- ***** JAVASCRIPT ***** -->
+    <!-- Plugins -->
+    <script src="../assets4/plugins/bootstrap/popper.min.js"></script>
+    <script src="../assets4/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script src="../lib/jquery.imagesloaded/imagesloaded-old.min.js"></script>
+    <script src="../assets4/js/functions2.js"></script>
+
+    <!-- Place your API Key in 'YOUR_API_KEY'
+    <!-- Scripts -->
+
+
+    <script>
+        window.fwSettings = {
+            'widget_id': 61000000445
+        };
+        !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
+    </script>
+    <script type='text/javascript' src='https://widget.freshworks.com/widgets/61000000445.js' async defer></script>
+
+    <script>
+
+        if ($("#greybox").length) {
+
+            $("#greybox").html("<h1>" + $("#greybox").width().toFixed(0) + " x " + $("#greybox").height().toFixed(0) + "");
+        }
+
+    </script>
+
+
+
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVQ5GlfsT19J_M1CN8LBZTJNv_h-JeV-E"></script>
+
+    <script src="../lib/googlemaps-markercluster/googlemarkercluster.min.js"></script>
+
+    <script>
+
+        function showallCities() {
+
+            $("#btnmorecities").hide();
+
+            $('#moreCities').show();
+
+            var accordionActiveContent = $('#cityaccordion').children(".accordion-content");
+            var accordionHeight = accordionActiveContent.prop("scrollHeight");
+
+            accordionActiveContent.css({ 'max-height': accordionHeight + "px" });
+
+
+
+        }
+
+
+
+
+        function ToggleMap() {
+
+
+            $('#member-modal').modal('toggle');
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

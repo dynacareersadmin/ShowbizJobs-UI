@@ -1,0 +1,767 @@
+﻿
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Job Board">
+    <meta name="keywords" content="">
+    <title>Explore Jobs | JobBoard</title>
+    <!-- Favicon -->
+    <link href="../favicon.ico" rel="shortcut icon">
+
+    <!-- CSS -->
+
+    <link href="../assets4/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets4/css/app.css" rel="stylesheet">
+
+    <!-- Fonts/Icons -->
+    <link href="../assets4/plugins/font-awesome/css/all.css" rel="stylesheet">
+    <link href="../assets4/plugins/themify/themify-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="../css/pagedlist.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+
+    <style>
+    </style>
+
+
+
+
+
+
+
+</head>
+<body class="bg-grey-lightest ">
+
+
+    <meta charset="utf-8">
+
+
+    <header>
+
+        <nav class="navbar navbar-dark">
+            <div class="container">
+                <div class="navbar-brand" href="../">
+                    <img src="../assets4/images/shutterlogo3-sm-white.png" />
+                    <h5>showbizjobs</h5>
+
+
+                </div>
+                <ul class="nav m-auto text-white-01 dropdown-icon-arrow">
+
+                    <!-- add 'dropdown-dark/dropdown-grey/dropdown-transparent/dropdown-transparent-dark' -->
+                    <!-- Basic link -->
+                    <!-- Dropdown -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Login?returnurl=%2FJobs%2FExplore"><i class="fa fa-unlock mr-2"></i> Login</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="../Identity/Account/Register"><i class="fa fa-user-plus mr-2"></i> Sign Up</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Jobs/Explore">Explore Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Internships/Explore">Explore Internships</a>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link" href="../Resources/">Advice</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">How To Use The Site</a></li>
+                            <li><a href="#">Membership Features</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Application Help</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/ResumeTips">Resume Tips</a>
+                                    <a href="../Resources/CoverLetterTips">Cover Letter Tips</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Step by Step Guides</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Job Alerts</a>
+                                    <a href="../Resources/">Changing ID / Password</a>
+                                    <a href="../Resources/">Canceling Membership</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Avoiding Scams</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Talent Agency / Acting Scams</a>
+                                    <a href="../Resources/">Production Assistant Scams</a>
+                                    <a href="../Resources/">Overseas Work Scams</a>
+                                </div>
+                            </li>
+                            <li class="sub-dropdown">
+                                <a href="#">Industry Articles</a>
+                                <div class="sub-dropdown-menu">
+                                    <a href="../Resources/">Breaking into Entertainment</a>
+                                    <a href="../Resources/">Changing Careers</a>
+                                    <a href="../Resources/">More Articles...</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+
+
+                </ul><!-- end nav -->
+                <!-- Icons -->
+                <ul class="list-horizontal-unstyled">
+                    <li class="ml-2 d-none d-lg-inline">
+
+                        <a href="#" class="button button-xs button-grey text-dark button-radius button-hover-float mt-0" data-toggle="modal" data-target="#register-modal"><i class="fa fa-user-plus"></i> Sign Up</a>
+
+                    </li>
+                    <li class="ml-2 d-none d-lg-inline">
+                        <a class="button button-xs button-white text-dark button-radius button-hover-float" href="../Identity/Account/Login?returnurl=%2FJobs%2FExplore"><i class="fa fa-unlock"></i> Login</a>
+                    </li>
+
+                </ul>
+
+                <!-- Nav Toggle button -->
+                <button class="nav-toggle-btn position-right">
+                    <span class="lines"></span>
+                </button>
+            </div><!-- end container -->
+        </nav>
+
+    </header>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="font-14 fa fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="text-center mb-4">
+                        <h4>Choose Your Account Type</h4>
+                        <a class="button btn button-xl button-dark mr-3" href="../Identity/Account/Register">Job Seeker</a><a class="button button-xl btn btn-info" href="../Identity/Account/Register?UserType=Employer">Employer</a>
+                    </div>
+
+                </div>
+
+
+
+
+            </div><!-- end modal-content -->
+        </div><!-- end modal-dialog -->
+    </div><!-- end modal -->
+    <!-- Breadcrumb -->
+
+    <div class='bg-secondary pt-3 pb-3'> <div class='container'> <div class='row'> <div class='col-12 col-md-9'> <nav class='text-left pl-2'> <ul class='breadcrumb'><li class='breadcrumb-item text-white'><a href='/'>Home</a></li><li class='breadcrumb-item'><a href='/Jobs/Explore'>Jobs</a></li></ul> </nav> </div> <div class='col-md-3 text-right d-none d-lg-block'><a href='/Employer' class='heading-uppercase'>Employer? Click Here</a> </div> </div> </div> </div>
+
+
+
+    <!-- Body section -->
+
+    <main id="content" role="main">
+
+
+
+
+
+
+
+        <div class="bg-grey-gradient-top" style="padding: 10px 0 5px 0;">
+            <div class="container">
+                <form method="get" class="form-style-2" autocomplete="off" action="/Search">
+                    <div class="row">
+
+                        <div class="col-12 col-lg-3 mb-1 text-lg-right">
+                            <h5 class="font-weight-500 col-form-label">Search Listings</h5>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3 mb-1">
+                            <label for="Keyword" class="sr-only">Keyword</label>
+                            <input type="text" class="form-control" name="searchstring" placeholder="Job Title, Company, or Keyword" value="">
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-1">
+                            <label for="Location" class="sr-only">Location</label>
+                            <input type="text" class="form-control" name="location" placeholder="City or Zip" value="">
+
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <button type="submit" class="btn button-sm btn-secondary mb-2">Search</button>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-12 col-lg-9 offset-lg-3">
+
+                            <label class="mr-3 float-left text-uppercase font-weight-bolder font-13">Quick Search: </label>
+
+                            <ul class="list-inline-vbar font-13 mb-2">
+                                <li><a class="hyperlink-8" href="../Jobs/PostedDate/Day">New Jobs</a></li>
+                                <li><a class="hyperlink-8" href="../Jobs/Location/City/Los%20Angeles">LA Jobs</a></li>
+                                <li><a class="hyperlink-8" href="../Jobs/Location/City/New%20York">NYC Jobs</a></li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div id="companyexplore" class="section-xs bg-grey">
+            <div class="container">
+
+                <div id="page1" class="row col-spacing-70">
+                    <!-- Main Section -->
+                    <div class="col-12 col-lg-9 order-2">
+                        <div class="row mb-2">
+                            <div class="col-12 mb-1">
+                                <h1 class="font-weight-bold line-height-100">Explore Jobs</h1>
+
+
+                            </div>
+
+                        </div><!-- end row -->
+                        <div class="bg-white border-all border-radius padding-30">
+
+                            <div class="row margin-bottom-20">
+
+
+                                <div class="col-lg-3 mb-2">
+                                    <h6 class="text-uppercase text-nowrap mb-0" href="#">Explore by</h6>
+                                </div>
+                                <div class="col-lg-9 mb-2">
+
+                                    <ul class="list-inline-vbar mt-0" style="font-size: 13px;">
+                                        <li><a class="text-uppercase text-button" style="font-weight:600 !important" href="#category">Category</a></li>
+                                        <li><a class="text-uppercase text-button" style="font-weight:600 !important" href="#topcities">Top Cities</a></li>
+                                        <li><a class="text-uppercase text-button" style="font-weight:600 !important" href="#usstate">State (US)</a></li>
+                                        <li><a class="text-uppercase text-button" style="font-weight:600 !important" href="#international">International</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="category" class="row margin-bottom-10">
+
+                                <div class="col-lg-3">
+
+                                    <h4 class="text-primary mb-0"><a href="#">Category</a></h4>
+
+                                </div>
+
+                                <div class="col-lg-9" style="border-left: solid 1px gray;">
+                                    <ul id="categories" class="twocolumns list-unstyled font-13 font-weight-semi-bold text-nowrap">
+                                        <li>
+                                            <a href="../Jobs/Category/Acting">Acting / Casting Call</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Animation_Graphic_Design">Animation &amp; Graphic Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Assistant_Administrative">Assistant / Administrative</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Broadcast_Technical_Operations">Broadcast Technical Operations</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Casting_Office">Casting Office</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Development">Development</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Digital_Print_Publishing">Digital/Print Publishing &amp; Writing</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Distribution_Acquisition">Distribution &amp; Acquisition</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Editing_Post_Production">Editing &amp; Post Production</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Engineering">Engineering</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Entertainer">Entertainer</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Equipment_Sales_Servicing">Equipment Sales &amp; Servicing</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Executive">Executive Level</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Fashion">Fashion</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Arts_Music_Film_Festival">Film, Art, &amp; Music Festivals</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Finance_Accounting">Finance &amp; Accounting</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/General_Labor">General Labor</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Human_Resources">Human Resources</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Instructor_Education">Instructor &amp; Education</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/IT_Development">IT &amp; Technology Development</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Legal_Business_Affairs">Legal &amp; Business Affairs</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Marketing_Advertising">Marketing &amp; Advertising</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Streaming_Content">MCN/Streaming Content</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Music">Music</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Production_Crew">Production Crew</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Production_Office">Production Office</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/PR">Public Relations</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Radio_Podcast">Radio &amp; Podcast</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Sales_Business_Development">Sales &amp; Business Development</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Sports">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Talent_Agency_Management">Talent Agency &amp; Management</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Theater_Live_Entertainment">Theater &amp; Live Entertainment</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/TV_Digital_News">TV &amp; Digital News</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/TV_Network_Studio">TV Network / Studio</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/TV_Station">TV Station</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Union_Guild_Trade_Association">Unions, Guilds, &amp; Trade Associations</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Video_Game">Video Game Development / Publishing</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Visual_Effects">Visual Effects</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Category/Writing_TV_Film">Writing - TV / Film</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <div id="topcities" class="row margin-bottom-10">
+
+                                <div class="col-lg-3">
+
+                                    <h4 class="text-primary mb-0"><a href="#">Top Cities</a></h4>
+
+                                </div>
+
+                                <div class="col-lg-9" style="border-left: solid 1px gray">
+                                    <ul class="threecolumns list-unstyled font-13 font-weight-semi-bold text-nowrap">
+                                        <li>
+                                            <a href="../Jobs/Location/City/Los%20Angeles">Los Angeles</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Location/City/New%20York">New York</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Location/City/Chicago">Chicago</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Location/City/Atlanta">Atlanta</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Location/City/Miami">Miami</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Location/City/Vancouver">Vancouver BC</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="usstate" class="row margin-bottom-10">
+
+                                <div class="col-lg-3">
+
+                                    <h4 class="text-primary mb-0"><a href="#">State (US)</a></h4>
+
+                                </div>
+
+                                <div class="col-lg-9" style="border-left: solid 1px gray">
+                                    <ul class="threecolumns list-unstyled font-13 font-weight-semi-bold text-nowrap">
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/AL">Alabama</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/AK">Alaska</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/AR">Arkansas</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/AZ">Arizona</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/CA">California</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/CO">Colorado</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/CT">Connecticut</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/DC">Washington D.C.</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/DE">Delaware</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/FL">Florida</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/GA">Georgia</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/HI">Hawaii</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/IA">Iowa</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/ID">Idaho</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/IL">Illinois</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/IN">Indiana</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/KS">Kansas</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/KY">Kentucky</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/LA">Louisiana</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MA">Massachusetts</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MD">Maryland</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/ME">Maine</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MI">Michigan</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MN">Minnesota</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MO">Missouri</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MS">Mississippi</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/MT">Montana</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NC">North Carolina</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/ND">North Dakota</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NE">Nebraska</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NH">New Hampshire</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NJ">New Jersey</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NM">New Mexico</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NV">Nevada</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/NY">New York</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/OK">Oklahoma</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/OH">Ohio</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/OR">Oregon</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/PA">Pennsylvania</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/RI">Rhode Island</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/SC">South Carolina</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/SD">South Dakota</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/TN">Tennessee</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/TX">Texas</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/UT">Utah</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/VA">Virginia</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/VT">Vermont</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/WA">Washington</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/WI">Wisconsin</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/WV">West Virginia</a>
+                                        </li>
+                                        <li>
+                                            <a class="font-weight-semi-bold" href="../Jobs/Location/State/WY">Wyoming</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                            <div id="international" class="row margin-bottom-10">
+
+                                <div class="col-lg-3">
+
+                                    <h4 class="text-primary mb-0" style="font-size:22px;"><a href="#">International</a></h4>
+
+                                </div>
+
+                                <div class="col-lg-9" style="border-left: solid 1px gray">
+                                    <ul class="threecolumns list-unstyled font-13 font-weight-semi-bold text-nowrap">
+                                        <li>
+                                            <a href="../Jobs/Location/Country/CA">Canada</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Jobs/Location/Country/GB">United Kingdom</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Singapore</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">South Korea</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Germany</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">China</a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- end Main Section -->
+                    <!--  Sidebar -->
+
+
+                    <div class="col-12 col-lg-3 order-lg-1 order-sm-3 sidebar-wrapper mt-5 padding-0">
+
+                        <!--  Ad -->
+                        <img class="adimage" src="../assets4/images/col-3-square.jpg" alt="">
+                        <!--  End Ad -->
+
+                    </div>
+                    <!-- end Sidebar -->
+
+                </div><!-- end row -->
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <!-- end Body section -->
+    <footer>
+        <div class="section-sm bg-dark-lighter">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-left order-md-1">
+                        <h3 class="margin-0">showbizjobs</h3>
+                    </div>
+                    <div class="col-12 col-md-3 text-center text-md-right order-md-3">
+                        <ul class="list-inline">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 text-center order-md-2">
+                        <ul class="list-inline font-small uppercase font-weight-normal">
+                            <li><a class="text-link-7" href="../">Home</a></li>
+                            <li><a class="text-link-7" href="../Employer/">Employers</a></li>
+                            <li><a class="text-link-7" href="../Resources/">Support</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div>
+        <div class="section-xs bg-dark p-2">
+            <div class="container text-center">
+                <p>&copy; 2020 showbizjobs All Rights Reserved.</p>
+            </div><!-- end container -->
+        </div>
+    </footer>
+
+
+
+
+
+    <!-- ***** JAVASCRIPT ***** -->
+    <!-- Plugins -->
+    <script src="../assets4/plugins/bootstrap/popper.min.js"></script>
+    <script src="../assets4/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script src="../lib/jquery.imagesloaded/imagesloaded-old.min.js"></script>
+    <script src="../assets4/js/functions2.js"></script>
+
+    <!-- Place your API Key in 'YOUR_API_KEY'
+    <!-- Scripts -->
+
+
+    <script>
+        window.fwSettings = {
+            'widget_id': 61000000445
+        };
+        !function () { if ("function" != typeof window.FreshworksWidget) { var n = function () { n.q.push(arguments) }; n.q = [], window.FreshworksWidget = n } }()
+    </script>
+    <script type='text/javascript' src='https://widget.freshworks.com/widgets/61000000445.js' async defer></script>
+
+    <script>
+
+        if ($("#greybox").length) {
+
+            $("#greybox").html("<h1>" + $("#greybox").width().toFixed(0) + " x " + $("#greybox").height().toFixed(0) + "");
+        }
+
+    </script>
+
+
+    <script>
+
+        function sortUL(selector) {
+            var $ul = $(selector);
+            $ul.find('li').sort(function (a, b) {
+                var upA = $(a).text().toUpperCase();
+                var upB = $(b).text().toUpperCase();
+                return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
+            }).appendTo(selector);
+        };
+
+        $(document).ready(function () {
+            sortUL("#categories");
+
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

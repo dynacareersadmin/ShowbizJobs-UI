@@ -1,0 +1,22 @@
+//
+// MG Custom Styles //
+//
+
+//Colors
+$color-primary: #337ab7;
+$color-primary-lighter: lighten( $color-primary, 10% );
+$color-secondary: #384551;
+$color-secondary-lighter: lighten( $color-secondary, 20% );
+
+
+//Backgrounds
+$bg-secondary: #384551 !important;
+
+
+//Buttons
+$button-dark-lighter: $color-dark-lighter;
+
+$button-primary: $color-primary;
+$button-primary-lighter: $color-primary-lighter;
+$button-secondary: $color-secondary;
+$button-secondary-lighter: $color-secondary-lighter;
